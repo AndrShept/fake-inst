@@ -1,0 +1,34 @@
+{
+    "user": [
+        {
+            "id": "1",
+            "name": "Andr-TOP",
+            "description": "desc",
+            "avatarUrl": "https://api.multiavatar.com/Starcrasher.png?apikey=nw1DJY2KPt9Lo8"
+        },
+        {
+            "id": "2",
+            "name": "Olga",
+            "description": "desc",
+            "avatarUrl": "https://api.multiavatar.com/Starcrasher.png?apikey=nw1DJY2KPt9Lo8"
+        },
+        {
+            "id": "3",
+            "name": "Vital-dnar",
+            "description": "desc",
+            "avatarUrl": "https://api.multiavatar.com/Starcrasher.png?apikey=nw1DJY2KPt9Lo8"
+        },
+        {
+            "id": "4",
+            "name": "Xrusti40k",
+            "description": "desc",
+            "avatarUrl": "https://api.multiavatar.com/Starcrasher.png?apikey=nw1DJY2KPt9Lo8"
+        },
+        {
+            "id": "5",
+            "name": "Ka4-pasosik",
+            "description": "desc",
+            "avatarUrl": "https://api.multiavatar.com/Starcrasher.png?apikey=nw1DJY2KPt9Lo8"
+        }
+    ]
+}

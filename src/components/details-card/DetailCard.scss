@@ -1,0 +1,84 @@
+.cnDetailCardRoot{
+display: flex;
+flex-direction: column;
+width: 600px;
+border: 1px solid #dbdbdb;
+box-shadow: 0 2px 4px rgba($color: #000000, $alpha: 0.2);
+}
+.cnDetailCardHeader{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    height: 60px;
+    padding-left: 20px;
+    background-color: #fff;
+
+}
+
+.cnDetailCardImg{
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+
+}
+
+.cnDetailCardButtons{
+    display: flex;
+    padding: 10px;
+
+}
+
+
+.cnDetailCardLikes{
+
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px;
+}
+
+.cnDetailCardComments{
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px 10px 10px;
+
+}
+
+.cnDetailCardTextArea{
+    border: none;
+    background-color: white;
+    padding: 10px;
+    outline: none;
+    resize: none;
+
+}
+.cnDetailCardLikeIcon{
+    margin-right: 10px;
+    cursor: pointer;
+
+}
+
+.cnDetailCardCommentsIcon{
+    cursor: pointer;
+}
+
+
+
+.cnShowButtonOpenComments{
+    font-weight: 600;
+    color: rgb(46, 32, 247);
+    cursor: pointer;
+    &:hover{
+        color:darken(rgb(46, 32, 247), 15%) ;
+    }
+}
+
+.cnShowButtonHideComments{
+    font-weight: 600;
+    color: rgb(46, 32, 247);
+    cursor: pointer;
+    &:hover{
+        color:darken(rgb(46, 32, 247), 15%) ;
+    }
+}
+
+
