@@ -2,7 +2,7 @@ import React from 'react';
 import { Layout } from '../../components/layout/Layout';
 import { DetailCard } from '../../components/details-card/DetailCard';
 import { useAppDispatch, useTypedSelector } from '../../hooks/useTypeSelector';
-import { getPhotos } from '../../api/photos';
+import { fetchPhotos } from '../../redux/actions/photos';
 
 const comments = [
   {
@@ -29,9 +29,9 @@ const comments = [
 
 export const MainPage = () => {
   const dispatch = useAppDispatch()
-  const state = useTypedSelector(state=> state)
+  const {isPhotoLoading,photos} = useTypedSelector(state=> state.photos)
   React.useEffect(()=> {
-   ''
+    dispatch(fetchPhotos())
   },[])
   return (
     <Layout nickName='Andr' id={1}>
