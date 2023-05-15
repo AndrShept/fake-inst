@@ -1,6 +1,8 @@
 import React from 'react';
 import { Layout } from '../../components/layout/Layout';
 import { DetailCard } from '../../components/details-card/DetailCard';
+import { useAppDispatch, useTypedSelector } from '../../hooks/useTypeSelector';
+import { getPhotos } from '../../api/photos';
 
 const comments = [
   {
@@ -26,6 +28,11 @@ const comments = [
 ];
 
 export const MainPage = () => {
+  const dispatch = useAppDispatch()
+  const state = useTypedSelector(state=> state)
+  React.useEffect(()=> {
+   ''
+  },[])
   return (
     <Layout nickName='Andr' id={1}>
       <div>MainPage</div>
