@@ -4,7 +4,7 @@ import { AiOutlineHeart, AiFillHeart } from 'react-icons/ai';
 import { FaRegComment } from 'react-icons/fa';
 import './DetailCard.scss';
 import { Comment } from '../comment/Comment';
-import cn from 'classnames'
+import cn from 'classnames';
 
 interface DetailCardProps {
   userName?: string;
@@ -14,7 +14,7 @@ interface DetailCardProps {
   likes?: number;
   isLikedByYou?: boolean;
   comments: { text: string; nickName: string }[];
-  className: string
+  className: string;
 }
 
 export const DetailCard: React.FC<DetailCardProps> = ({
@@ -25,7 +25,7 @@ export const DetailCard: React.FC<DetailCardProps> = ({
   likes,
   isLikedByYou,
   comments,
-  className
+  className,
 }) => {
   const [isShowComments, setIsShowComments] = React.useState(true);
   const handleShowComments = () => {
@@ -59,8 +59,8 @@ export const DetailCard: React.FC<DetailCardProps> = ({
 
     return (
       <>
-        {comments.map((comment) => (
-          <Comment {...comment} />
+        {comments.map((comment, i) => (
+          <Comment {...comment} key={i} />
         ))}
         <span onClick={handleShowComments} className='cnShowButtonHideComments'>
           {/* {comments.length < 0 ? "cховати": ''} */}cховати

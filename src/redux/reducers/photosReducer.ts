@@ -1,11 +1,14 @@
-
-import {PhotoState, PhotoAction, PhotoActionTypes} from '../../types/photoTypes'
+import {
+  PhotoState,
+  PhotoAction,
+  PhotoActionTypes,
+} from '../../types/photoTypes';
 
 const initialState: PhotoState = {
   photos: [],
   isPhotoLoading: true,
-  error: null
-  
+  error: null,
+  totalPhotos: 0,
 };
 export const photosReducer = (state = initialState, action: PhotoAction) => {
   switch (action.type) {
@@ -18,7 +21,7 @@ export const photosReducer = (state = initialState, action: PhotoAction) => {
       return {
         ...state,
         isPhotoLoading: false,
-        error: action.payload
+        error: action.payload,
       };
     case PhotoActionTypes.FETCH_PHOTOS_SUCCESS:
       return {
@@ -26,6 +29,12 @@ export const photosReducer = (state = initialState, action: PhotoAction) => {
         photos: action.payload,
         isPhotoLoading: false,
       };
+    case PhotoActionTypes.SET_TOTAL_PHOTOS:
+      return {
+        ...state,
+        totalPhotos: action.payload,
+      };
+
     default: {
       return {
         ...state,
