@@ -7,10 +7,7 @@ const initialState: PhotoState = {
   error: null
   
 };
-export const photosReducer = (
-  state = initialState,
-  action: PhotoAction
-) => {
+export const photosReducer = (state = initialState, action: PhotoAction) => {
   switch (action.type) {
     case PhotoActionTypes.FETCH_PHOTOS_START:
       return {

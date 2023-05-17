@@ -4,6 +4,7 @@ import { AiOutlineHeart, AiFillHeart } from 'react-icons/ai';
 import { FaRegComment } from 'react-icons/fa';
 import './DetailCard.scss';
 import { Comment } from '../comment/Comment';
+import cn from 'classnames'
 
 interface DetailCardProps {
   userName?: string;
@@ -13,6 +14,7 @@ interface DetailCardProps {
   likes?: number;
   isLikedByYou?: boolean;
   comments: { text: string; nickName: string }[];
+  className: string
 }
 
 export const DetailCard: React.FC<DetailCardProps> = ({
@@ -23,6 +25,7 @@ export const DetailCard: React.FC<DetailCardProps> = ({
   likes,
   isLikedByYou,
   comments,
+  className
 }) => {
   const [isShowComments, setIsShowComments] = React.useState(true);
   const handleShowComments = () => {
@@ -60,14 +63,14 @@ export const DetailCard: React.FC<DetailCardProps> = ({
           <Comment {...comment} />
         ))}
         <span onClick={handleShowComments} className='cnShowButtonHideComments'>
-          Сховати
+          {/* {comments.length < 0 ? "cховати": ''} */}cховати
         </span>
       </>
     );
   };
 
   return (
-    <div className='cnDetailCardRoot'>
+    <div className={cn(className, 'cnDetailCardRoot')}>
       <div className='cnDetailCardHeader'>
         <UserBadge nickName={userName} avatarUrl={avatarUrl} id={userId} />
       </div>
