@@ -6,6 +6,7 @@ import { fetchPhotos } from '../../redux/actions/photos';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import './MainPage.scss';
 import { ThreeDots, ColorRing } from 'react-loader-spinner';
+import { fetchUsers } from '../../redux/actions/users';
 
 export const MainPage: React.FC = () => {
   const dispatch = useAppDispatch();
@@ -15,6 +16,7 @@ export const MainPage: React.FC = () => {
   const [page, setPage] = React.useState(1);
   React.useEffect(() => {
     dispatch(fetchPhotos(page));
+    dispatch(fetchUsers())
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [page]);
   const nextHandler = () => {
@@ -51,7 +53,7 @@ export const MainPage: React.FC = () => {
   wrapperClass="blocks-wrapper"
   colors={['#e15b64', '#f47e60', '#f8b26a', '#abbd81', '#849b87']}
 />   : 
-          photos.map(({ author, id, imgUrl, likes, title, comments }) => (
+          photos.map(({ author, id, imgUrl, likes,  comments }) => (
             <DetailCard
               key={id}
               userName={author.nickName}
