@@ -5,6 +5,7 @@ import { FaRegComment } from 'react-icons/fa';
 import './DetailCard.scss';
 import { Comment } from '../comment/Comment';
 import cn from 'classnames';
+import nextId from "react-id-generator";
 
 interface DetailCardProps {
   userName?: string;
@@ -29,7 +30,7 @@ export const DetailCard: React.FC<DetailCardProps> = ({
 }) => {
   const [isShowComments, setIsShowComments] = React.useState(true);
   const handleShowComments = () => {
-    setIsShowComments(!isShowComments);
+    setIsShowComments(false);
   };
   const renderComments = () => {
     if (comments.length > 2 && isShowComments) {
@@ -40,8 +41,8 @@ export const DetailCard: React.FC<DetailCardProps> = ({
 
       return (
         <>
-          {sliceComments.map((comment, i) => (
-            <Comment {...comment} key={i} />
+          {sliceComments.map((comment) => (
+            <Comment {...comment} key={nextId()} />
           ))}
           <p>
             {' '}
@@ -59,11 +60,11 @@ export const DetailCard: React.FC<DetailCardProps> = ({
 
     return (
       <>
-        {comments.map((comment, i) => (
-          <Comment {...comment} key={i} />
+        {comments.map((comment) => (
+          <Comment {...comment} key={nextId()} />
         ))}
-        <span onClick={handleShowComments} className='cnShowButtonHideComments'>
-          {/* {comments.length < 0 ? "cховати": ''} */}cховати
+        <span onClick={()=> setIsShowComments(true)} className='cnShowButtonHideComments'>
+          {!isShowComments ? "cховати": ''}
         </span>
       </>
     );
