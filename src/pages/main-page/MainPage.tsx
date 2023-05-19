@@ -6,25 +6,33 @@ import { fetchPhotos } from '../../redux/actions/photos';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import './MainPage.scss';
 import { ThreeDots, ColorRing } from 'react-loader-spinner';
-import { fetchUsers } from '../../redux/actions/users';
+import {  fetchUsers } from '../../redux/actions/users';
+import { fetchAuthorizedUsers } from '../../redux/actions/users';
 
 export const MainPage: React.FC = () => {
   const dispatch = useAppDispatch();
   const { photos, isPhotoLoading, totalPhotos } = useAppSelector(
     (state) => state.photos
+   
+   
   );
+  const {authorizedUser} = useAppSelector(state => state.users)
   const [page, setPage] = React.useState(1);
   React.useEffect(() => {
     dispatch(fetchPhotos(page));
     dispatch(fetchUsers())
+    dispatch(fetchAuthorizedUsers())
+    
+    
+   
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [page]);
+  }, [page,]);
   const nextHandler = () => {
     setPage(page + 1);
   };
 
   return (
-    <Layout nickName='Andr' id={1}>
+    <Layout nickName={authorizedUser.name} id={authorizedUser.id} avatarUrl={authorizedUser.avatarUrl}>
       <div className='cnMainPageRoot'>
         <InfiniteScroll
           dataLength={photos.length}
@@ -61,7 +69,7 @@ export const MainPage: React.FC = () => {
               imgUrl={imgUrl}
               avatarUrl={author.avatarUrl}
               likes={likes.length}
-              isLikedByYou={true}
+              isLikedByYou={likes.includes(authorizedUser.id)}
               comments={comments}
               className='cnMainPageCard'
             />

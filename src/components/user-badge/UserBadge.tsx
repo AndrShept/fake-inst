@@ -1,14 +1,13 @@
 import React from 'react';
 import { UserProps } from '../../types/UserTypes';
-import {useNavigate} from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
 import './UserBadge.scss';
 
 export const UserBadge: React.FC<UserProps> = ({ nickName, avatarUrl, id }) => {
-
-    const navigate = useNavigate()
-const onUserBadgeClick = ()=>{
-    navigate(`/${id}`)
-}
+  const navigate = useNavigate();
+  const onUserBadgeClick = () => {
+    navigate(`users/${id}`);
+  };
 
   return (
     <div className='cnBadgeRoot' onClick={onUserBadgeClick}>

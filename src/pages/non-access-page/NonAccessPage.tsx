@@ -1,7 +1,5 @@
-import React from 'react'
+import React from 'react';
 
-export const NonAccessPage = () => {
-  return (
-    <div>NonAccessPage</div>
-  )
-}
+export const NonAccessPage:React.FC = () => {
+  return <div>NonAccessPage</div>;
+};

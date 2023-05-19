@@ -6,6 +6,8 @@ import './DetailCard.scss';
 import { Comment } from '../comment/Comment';
 import cn from 'classnames';
 import nextId from "react-id-generator";
+import { useAppDispatch } from '../../hooks/hooks';
+import { setLikes } from '../../redux/actions/users';
 
 interface DetailCardProps {
   userName?: string;
@@ -28,6 +30,7 @@ export const DetailCard: React.FC<DetailCardProps> = ({
   comments,
   className,
 }) => {
+  const dispatch = useAppDispatch()
   const [isShowComments, setIsShowComments] = React.useState(true);
   const handleShowComments = () => {
     setIsShowComments(false);
@@ -80,9 +83,9 @@ export const DetailCard: React.FC<DetailCardProps> = ({
       </div>
       <div className='cnDetailCardButtons'>
         {isLikedByYou ? (
-          <AiFillHeart className='cnDetailCardLikeIcon' />
+          <AiFillHeart onClick={ () => dispatch(setLikes())} className='cnDetailCardLikeIcon' />
         ) : (
-          <AiOutlineHeart className='cnDetailCardLikeIcon' />
+          <AiOutlineHeart onClick={ () => dispatch(setLikes())} className='cnDetailCardLikeIcon' />
         )}
         <FaRegComment className='cnDetailCardCommentsIcon' />
       </div>

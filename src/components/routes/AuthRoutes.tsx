@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import React from 'react';
 import { Route } from 'react-router-dom';
 import { MainPage } from '../../pages/main-page/MainPage';
 import { UserBadge } from '../user-badge/UserBadge';
@@ -6,20 +6,21 @@ import { NonAccessPage } from '../../pages/non-access-page/NonAccessPage';
 import { useAppDispatch, useAppSelector } from '../../hooks/hooks';
 import { Routes } from 'react-router-dom';
 import nextId from 'react-id-generator';
-import { fetchAuthUsers } from '../../redux/actions/users';
+import { setAuthUsers } from '../../redux/actions/users';
 
 const authRoutes = [
   { path: '/', element: <MainPage /> },
-  { path: '/:id', element: <UserBadge /> },
+  { path: 'users/:id', element: <UserBadge /> },
 ];
 
 export const AuthRoutes: React.FC = () => {
   const userAuth = useAppSelector((state) => state.users.userAuth);
-  const dispatch = useAppDispatch()
+  const dispatch = useAppDispatch();
 
-  React.useEffect(()=> {
-    dispatch(fetchAuthUsers())
-  }, [])
+  React.useEffect(() => {
+    dispatch(setAuthUsers(true));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   return (
     <div>
       <Routes>
@@ -29,6 +30,7 @@ export const AuthRoutes: React.FC = () => {
           <Route path='/' element={<NonAccessPage />} />
         )}
       </Routes>
+    
     </div>
   );
 };
