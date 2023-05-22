@@ -1,7 +1,7 @@
 import React from 'react';
 import './Navbar.scss';
 import { UserBadge } from '../user-badge/UserBadge';
-import { UserProps } from '../../types/UserTypes';
+import { UserProps } from '../../types/userTypes';
 
 
 

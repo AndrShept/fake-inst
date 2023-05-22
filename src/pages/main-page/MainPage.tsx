@@ -64,8 +64,9 @@ export const MainPage: React.FC = () => {
           photos.map(({ author, id, imgUrl, likes,  comments }) => (
             <DetailCard
               key={id}
+              id={id}
               userName={author.nickName}
-              userId={author.id}
+              userId={authorizedUser.id}
               imgUrl={imgUrl}
               avatarUrl={author.avatarUrl}
               likes={likes.length}

@@ -7,17 +7,18 @@ import { Comment } from '../comment/Comment';
 import cn from 'classnames';
 import nextId from "react-id-generator";
 import { useAppDispatch } from '../../hooks/hooks';
-import { setLikes } from '../../redux/actions/users';
+import { mutatePhotos } from '../../redux/actions/photos';
 
 interface DetailCardProps {
   userName?: string;
   avatarUrl?: string;
-  userId?: number;
+  userId: string;
   imgUrl?: string;
   likes?: number;
   isLikedByYou?: boolean;
   comments: { text: string; nickName: string }[];
   className: string;
+  id: number;
 }
 
 export const DetailCard: React.FC<DetailCardProps> = ({
@@ -29,9 +30,14 @@ export const DetailCard: React.FC<DetailCardProps> = ({
   isLikedByYou,
   comments,
   className,
+  id,
 }) => {
   const dispatch = useAppDispatch()
   const [isShowComments, setIsShowComments] = React.useState(true);
+  const handleLike = () =>{
+    dispatch(mutatePhotos(userId,id))
+    
+  }
   const handleShowComments = () => {
     setIsShowComments(false);
   };
@@ -83,11 +89,11 @@ export const DetailCard: React.FC<DetailCardProps> = ({
       </div>
       <div className='cnDetailCardButtons'>
         {isLikedByYou ? (
-          <AiFillHeart onClick={ () => dispatch(setLikes())} className='cnDetailCardLikeIcon' />
+          <AiFillHeart onClick={handleLike} size={18}  className='cnDetailCardLikeIconFull' />
         ) : (
-          <AiOutlineHeart onClick={ () => dispatch(setLikes())} className='cnDetailCardLikeIcon' />
+          <AiOutlineHeart onClick={handleLike} size={18} className='cnDetailCardLikeIcon' />
         )}
-        <FaRegComment className='cnDetailCardCommentsIcon' />
+        <FaRegComment className='cnDetailCardCommentsIcon' size={18} />
       </div>
       <div className='cnDetailCardLikes'>{`like ${likes} user`}</div>
       <div className='cnDetailCardComments'>{renderComments()}</div>

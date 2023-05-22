@@ -52,8 +52,22 @@ box-shadow: 0 2px 4px rgba($color: #000000, $alpha: 0.2);
 
 }
 .cnDetailCardLikeIcon{
-    margin-right: 10px;
+    margin-right: 6px;
     cursor: pointer;
+    color: red;
+
+    // &:hover{
+    //   border-radius: 2px;
+    //   padding: 40px;
+    // }
+
+
+}
+.cnDetailCardLikeIconFull{
+    margin-right: 6px;
+    cursor: pointer;
+    color: red;
+
 
 }
 

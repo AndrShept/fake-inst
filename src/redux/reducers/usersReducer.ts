@@ -1,11 +1,11 @@
-import { UsersAction, UsersActionTypes } from '../../types/UserTypes';
+import { UsersAction, UsersActionTypes } from '../../types/userTypes';
 
 const initialState = {
   user: {},
   isUserLoading: true,
   userAuth: false,
   authorizedUser: {},
-  isMutateLoading: true
+
 };
 
 export const userReducer = (state = initialState, action: UsersAction) => {
@@ -39,25 +39,7 @@ export const userReducer = (state = initialState, action: UsersAction) => {
           authorizedUser:action.payload
         }
 
-        case UsersActionTypes.MUTATE_USER_LIKES_START:
-          return{
-            ...state,
-            isMutateLoading : true
-          }
-        case UsersActionTypes.MUTATE_USER_LIKES_SUCCESS:
-          return{
-            ...state,
-            isMutateLoading : false
-            
-            
-          }
-        case UsersActionTypes.MUTATE_USER_LIKES_FAIL:
-          return{
-            // TODO ADD ERRORS
-            ...state,
-            isMutateLoading : false
-            
-          }
+   
 
     default:
       return { ...state };

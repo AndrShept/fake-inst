@@ -3,6 +3,9 @@ export enum PhotoActionTypes {
   FETCH_PHOTOS_FAIL = 'FETCH_PHOTOS_FAIL',
   FETCH_PHOTOS_SUCCESS = 'FETCH_PHOTOS_SUCCESS',
   SET_TOTAL_PHOTOS = 'SET_TOTAL_PHOTOS',
+  MUTATE_PHOTO_START = 'MUTATE_PHOTO_START',
+  MUTATE_PHOTO_SUCCESS = 'MUTATE_PHOTO_SUCCESS',
+  MUTATE_PHOTO_FAIL = 'MUTATE_PHOTO_FAIL',
 }
 
 export interface FetchPhotosStartAction {
@@ -21,6 +24,19 @@ export interface SetTotalPhotosAction {
   payload: number;
 }
 
+export interface MutateLikesStartActions {
+  type: PhotoActionTypes.MUTATE_PHOTO_START;
+}
+export interface MutateLikesSuccessActions {
+  type: PhotoActionTypes.MUTATE_PHOTO_SUCCESS;
+  payload: any[]
+ 
+}
+export interface MutateLikesFailActions {
+  type: PhotoActionTypes.MUTATE_PHOTO_FAIL;
+  payload: any
+}
+
 export interface PhotoState {
   photos: any[];
   isPhotoLoading: boolean;
@@ -31,4 +47,7 @@ export type PhotoAction =
   | FetchPhotosStartAction
   | FetchPhotosSuccessAction
   | FetchPhotosFailAction
-  | SetTotalPhotosAction;
+  | SetTotalPhotosAction
+  | MutateLikesStartActions
+  | MutateLikesSuccessActions
+  | MutateLikesFailActions;

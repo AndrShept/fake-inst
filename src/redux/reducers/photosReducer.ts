@@ -9,6 +9,7 @@ const initialState: PhotoState = {
   isPhotoLoading: true,
   error: null,
   totalPhotos: 0,
+
 };
 export const photosReducer = (state = initialState, action: PhotoAction) => {
   switch (action.type) {
@@ -34,6 +35,25 @@ export const photosReducer = (state = initialState, action: PhotoAction) => {
         ...state,
         totalPhotos: action.payload,
       };
+
+      case PhotoActionTypes.MUTATE_PHOTO_START:
+        return {
+          ...state,
+          
+        }
+      case PhotoActionTypes.MUTATE_PHOTO_SUCCESS:
+        return {
+          ...state,
+          
+
+        }
+      case PhotoActionTypes.MUTATE_PHOTO_FAIL:
+        return {
+          ...state,
+
+        }
+
+
 
     default: {
       return {
