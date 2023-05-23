@@ -13,7 +13,7 @@ export interface FetchPhotosStartAction {
 }
 export interface FetchPhotosSuccessAction {
   type: PhotoActionTypes.FETCH_PHOTOS_SUCCESS;
-  payload: any[];
+  payload: PhotoTypes[];
 }
 export interface FetchPhotosFailAction {
   type: PhotoActionTypes.FETCH_PHOTOS_FAIL;
@@ -29,20 +29,31 @@ export interface MutateLikesStartActions {
 }
 export interface MutateLikesSuccessActions {
   type: PhotoActionTypes.MUTATE_PHOTO_SUCCESS;
-  payload: any[]
- 
+  payload: PhotoTypes[];
 }
 export interface MutateLikesFailActions {
   type: PhotoActionTypes.MUTATE_PHOTO_FAIL;
-  payload: any
+  payload: any;
 }
 
 export interface PhotoState {
-  photos: any[];
+  photos: PhotoTypes[];
   isPhotoLoading: boolean;
   error: null | string;
   totalPhotos: number;
+  isMutateLoading: boolean;
 }
+
+export interface PhotoTypes {
+  id: number;
+  imgUrl: string;
+  likes: string[];
+  comments: { nickName: string; text: string }[] ;
+  author: { id: number; nickName: string; avatarUrl: string };
+  title: string;
+  body: string;
+}
+
 export type PhotoAction =
   | FetchPhotosStartAction
   | FetchPhotosSuccessAction

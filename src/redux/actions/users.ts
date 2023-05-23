@@ -1,7 +1,6 @@
 import { Dispatch } from 'redux';
 import { UsersAction, UsersActionTypes } from '../../types/UserTypes';
 import axios from 'axios';
-import { RootState } from '../store';
 
 export const fetchUsers = (id = 1): any => {
   return async (dispatch: Dispatch<UsersAction>) => {
@@ -32,7 +31,6 @@ export const fetchAuthorizedUsers = (): any => {
 
 export const setAuthUsers = (payload = false): any => {
   return (dispatch: Dispatch<UsersAction>) => {
-    // const response = await axios.get(`http://localhost:3000/users/${0}`)
     dispatch({ type: UsersActionTypes.IS_USERS_AUTH, payload });
   };
 };

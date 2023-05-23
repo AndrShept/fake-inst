@@ -9,6 +9,7 @@ const initialState: PhotoState = {
   isPhotoLoading: true,
   error: null,
   totalPhotos: 0,
+  isMutateLoading: true
 
 };
 export const photosReducer = (state = initialState, action: PhotoAction) => {
@@ -39,17 +40,20 @@ export const photosReducer = (state = initialState, action: PhotoAction) => {
       case PhotoActionTypes.MUTATE_PHOTO_START:
         return {
           ...state,
+          isMutateLoading: true
           
         }
       case PhotoActionTypes.MUTATE_PHOTO_SUCCESS:
         return {
           ...state,
+          isMutateLoading: false
           
 
         }
       case PhotoActionTypes.MUTATE_PHOTO_FAIL:
         return {
           ...state,
+          isMutateLoading: true
 
         }
 

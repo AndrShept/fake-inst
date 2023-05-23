@@ -43,14 +43,6 @@ box-shadow: 0 2px 4px rgba($color: #000000, $alpha: 0.2);
 
 }
 
-.cnDetailCardTextArea{
-    border: none;
-    background-color: white;
-    padding: 10px;
-    outline: none;
-    resize: none;
-
-}
 .cnDetailCardLikeIcon{
     margin-right: 6px;
     cursor: pointer;
@@ -94,5 +86,35 @@ box-shadow: 0 2px 4px rgba($color: #000000, $alpha: 0.2);
         color:darken(rgb(46, 32, 247), 15%) ;
     }
 }
+.cnDetailCardTextAreaWrapper{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.cnDetailCardTextArea{
+    width: 100%;
+    border: none;
+    background-color: white;
+    padding: 10px;
+    outline: none;
+    resize: none;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+}
 
 
+.cnDetailCardTextAreaButton{
+    // justify-self: self-end;
+    padding: 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: #2196F3;
+    color: white;
+    border-radius: 5px;
+    // width: 50%;
+    align-self: self-end;
+    
+
+}

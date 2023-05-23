@@ -69,8 +69,8 @@ export const MainPage: React.FC = () => {
               userId={authorizedUser.id}
               imgUrl={imgUrl}
               avatarUrl={author.avatarUrl}
-              likes={likes.length}
-              isLikedByYou={likes.includes(authorizedUser.id)}
+              likes={likes?.length}
+              isLikedByYou={likes?.includes(authorizedUser.id)}
               comments={comments}
               className='cnMainPageCard'
             />
