@@ -1,7 +1,8 @@
-export type UserProps = {
+export type UserTypes = {
   nickName?: string;
   avatarUrl?: string;
-  id?: string;
+  userId: number| string;
+
 };
 
 export enum UsersActionTypes {

@@ -1,15 +1,22 @@
 import React from 'react';
+import { UserBadge } from '../user-badge/UserBadge';
+import { CommentsTypes } from '../../types/photoTypes';
+import './Comment.scss'
 
-type CommentProps = {
-  nickName: string;
-  text: string;
-};
-
-export const Comment:React.FC<CommentProps> = ({ nickName, text }) => {
+export const Comment: React.FC<CommentsTypes> = ({
+  nickName,
+  text,
+  userId,
+  avatarUrl,
+}) => {
   return (
     <div className='cnCommentRoot'>
-      <span className='cnCommentName'>{nickName}</span>
-      <span>{text}</span>
+      <UserBadge nickName={nickName} userId={userId} avatarUrl={avatarUrl} />
+      {/* <span className='cnCommentName'>{nickName}</span> */}
+
+      <div >
+        <p className='cnCommentText'>{text}</p>
+      </div>
     </div>
   );
 };

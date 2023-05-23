@@ -1,3 +1,21 @@
+
+export interface PhotoTypes {
+  id: number;
+  imgUrl: string;
+  likes: string[];
+  comments: CommentsTypes[]
+  author: { id: number; nickName: string; avatarUrl: string };
+  title: string;
+  body: string;
+}
+
+export interface CommentsTypes {
+  nickName: string;
+  text: string;
+  avatarUrl?: string;
+  userId: number | string
+}
+
 export enum PhotoActionTypes {
   FETCH_PHOTOS_START = 'FETCH_PHOTOS_START',
   FETCH_PHOTOS_FAIL = 'FETCH_PHOTOS_FAIL',
@@ -44,15 +62,6 @@ export interface PhotoState {
   isMutateLoading: boolean;
 }
 
-export interface PhotoTypes {
-  id: number;
-  imgUrl: string;
-  likes: string[];
-  comments: { nickName: string; text: string }[] ;
-  author: { id: number; nickName: string; avatarUrl: string };
-  title: string;
-  body: string;
-}
 
 export type PhotoAction =
   | FetchPhotosStartAction

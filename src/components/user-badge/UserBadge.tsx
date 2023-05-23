@@ -1,12 +1,12 @@
 import React from 'react';
-import { UserProps } from '../../types/UserTypes';
+import { UserTypes } from '../../types/userTypes';
 import { useNavigate } from 'react-router-dom';
 import './UserBadge.scss';
 
-export const UserBadge: React.FC<UserProps> = ({ nickName, avatarUrl, id }) => {
+export const UserBadge: React.FC<UserTypes> = ({ nickName, avatarUrl, userId }) => {
   const navigate = useNavigate();
   const onUserBadgeClick = () => {
-    navigate(`users/${id}`);
+    navigate(`users/${userId}`);
   };
 
   return (

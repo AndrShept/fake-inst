@@ -65,10 +65,10 @@ export const MainPage: React.FC = () => {
             <DetailCard
               key={id}
               id={id}
-              userName={author.nickName}
+              userName={authorizedUser.name}
               userId={authorizedUser.id}
               imgUrl={imgUrl}
-              avatarUrl={author.avatarUrl}
+              avatarUrl={authorizedUser.avatarUrl}
               likes={likes?.length}
               isLikedByYou={likes?.includes(authorizedUser.id)}
               comments={comments}

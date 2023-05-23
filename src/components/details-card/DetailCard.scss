@@ -89,6 +89,7 @@ box-shadow: 0 2px 4px rgba($color: #000000, $alpha: 0.2);
 .cnDetailCardTextAreaWrapper{
     display: flex;
     flex-direction: column;
+    padding: 10px;
     
 }
 
@@ -100,6 +101,9 @@ box-shadow: 0 2px 4px rgba($color: #000000, $alpha: 0.2);
     outline: none;
     resize: none;
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    border-radius: 7px;
+
 
 }
 
@@ -115,6 +119,11 @@ box-shadow: 0 2px 4px rgba($color: #000000, $alpha: 0.2);
     border-radius: 5px;
     // width: 50%;
     align-self: self-end;
+    margin-top: 10px;
+    transition: 0.3s;
+    &:Hover{
+        background-color: darken( #2196F3, 10%);
+    }
     
 
 }

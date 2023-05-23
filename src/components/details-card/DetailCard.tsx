@@ -8,15 +8,16 @@ import cn from 'classnames';
 import nextId from 'react-id-generator';
 import { useAppDispatch } from '../../hooks/hooks';
 import { setComment, toggleLike } from '../../redux/actions/photos';
+import { CommentsTypes } from '../../types/photoTypes';
 
 interface DetailCardProps {
-  userName?: string;
-  avatarUrl?: string;
+  userName: string;
+  avatarUrl: string;
   userId: string;
-  imgUrl?: string;
-  likes?: number;
-  isLikedByYou?: boolean;
-  comments: { text: string; nickName: string }[];
+  imgUrl: string;
+  likes: number;
+  isLikedByYou: boolean;
+  comments: CommentsTypes[]
   className: string;
   id: number;
 }
@@ -38,7 +39,7 @@ export const DetailCard: React.FC<DetailCardProps> = ({
   const dispatch = useAppDispatch();
   const sendComment = () => {
     if (textComment.trim()) {
-      dispatch(setComment(id, userName, textComment));
+      dispatch(setComment(id, userName, textComment, userId, avatarUrl));
       setTextComment('');
     } else {
       return <p>Ведіть якісь дані</p>;
@@ -97,7 +98,7 @@ export const DetailCard: React.FC<DetailCardProps> = ({
   return (
     <div className={cn(className, 'cnDetailCardRoot')}>
       <div className='cnDetailCardHeader'>
-        <UserBadge nickName={userName} avatarUrl={avatarUrl} id={userId} />
+        <UserBadge nickName={userName} avatarUrl={avatarUrl} userId={userId} />
       </div>
       <div>
         <img src={imgUrl} alt='imgUrl' className='cnDetailCardImg' />
@@ -136,7 +137,7 @@ export const DetailCard: React.FC<DetailCardProps> = ({
             placeholder='Коментарій...'
             className='cnDetailCardTextArea'
           ></textarea>
-          <button onClick={sendComment} className='cnDetailCardTextAreaButton'>
+          <button  onClick={sendComment} className='cnDetailCardTextAreaButton'>
             Відправити
           </button>
         </div>

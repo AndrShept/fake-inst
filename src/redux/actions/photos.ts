@@ -71,7 +71,7 @@ export const toggleLike = (userId: string, id: number): any => {
 };
 
 
-export const setComment = ( id =2 , nickName = 'Andr', text = 'dasdsafdsgsd'):any => {
+export const setComment = ( id:number , nickName:string, text:string ,userId: string, avatarUrl:string ):any => {
 return async (dispatch:Dispatch<PhotoAction>, getState: ()=> RootState) => {
   dispatch({type: PhotoActionTypes.MUTATE_PHOTO_START})
 
@@ -80,7 +80,7 @@ return async (dispatch:Dispatch<PhotoAction>, getState: ()=> RootState) => {
   console.log(findPhotos)
   const findIndex = photos.photos.findIndex((item) => item.id === id);
   const NewPhotos = findPhotos
-  NewPhotos!.comments = [...findPhotos!.comments, {nickName, text} ]
+  NewPhotos!.comments = [...findPhotos!.comments, {nickName, text, userId, avatarUrl} ]
   
 
   try {
