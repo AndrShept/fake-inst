@@ -121,13 +121,13 @@ export const DetailCard: React.FC<DetailCardProps> = ({
         {isLikedByYou ? (
           <AiFillHeart
             onClick={handleLike}
-            size={18}
+            size={20}
             className='cnDetailCardLikeIconFull'
           />
         ) : (
           <AiOutlineHeart
             onClick={handleLike}
-            size={18}
+            size={20}
             className='cnDetailCardLikeIcon'
           />
         )}
@@ -135,13 +135,13 @@ export const DetailCard: React.FC<DetailCardProps> = ({
           <FaComment
             onClick={hadleClickCommentIcon}
             className='cnDetailCardCommentsIcon'
-            size={18}
+            size={20}
           />
         ) : (
           <FaRegComment
             onClick={hadleClickCommentIcon}
             className='cnDetailCardCommentsIcon'
-            size={18}
+            size={20}
           />
         )}
       </div>

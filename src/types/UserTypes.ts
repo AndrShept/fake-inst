@@ -6,6 +6,8 @@ export type UserTypes = {
   lastName?: string;
   subscribed?: number[];
   subscribers?: number[];
+  description?: string;
+  url?: string;
 };
 
 export interface AuthorizedUserTypes extends Omit<UserTypes, 'userId'> {

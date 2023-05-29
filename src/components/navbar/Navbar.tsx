@@ -6,12 +6,12 @@ import { Link } from 'react-router-dom';
 
 
 
-export const Navbar:React.FC<UserTypes> = ({ nickName, avatarUrl, userId }) => {
+export const Navbar:React.FC<UserTypes> = ({ nickName, avatarUrl, userId, }) => {
   return (
     <div className='cnNavbarRoot'>
       <div className='cnNavbarWrapper'>
         <Link to='/'>Shegram</Link>
-        <UserBadge  nickName={nickName} avatarUrl={avatarUrl} userId={userId}/>
+        <UserBadge   nickName={nickName} avatarUrl={avatarUrl} userId={userId}/>
       </div>
     </div>
   );

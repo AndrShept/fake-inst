@@ -1,0 +1,46 @@
+.cnCardRoot {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba($color: #000000, $alpha: 0.2);
+  &:hover .cnCardHover {
+    display: flex;
+  }
+  &:hover .cnCardIcons {
+    display: flex;
+  }
+}
+
+.cnCardImage {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: inherit;
+}
+.cnCardHover {
+  position: absolute;
+  display: none;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  align-items: center;
+  justify-content: center;
+  background-color: #0000006e;
+  border-radius: inherit;
+  z-index: 1;
+
+}
+
+.cnCardIcons {
+  display: none;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+}

@@ -60,6 +60,7 @@
       "avatarUrl": "https://api.multiavatar.com/kathrin.svg",
       "firstName": "Xrustya",
       "lastName": "Sheptycka",
+      "url": "https://i.ytimg.com/vi/l_3b4FfeWS8/sddefault.jpg",
       "subscribed": [
         3,
         4,
@@ -95,473 +96,38 @@
       "likes": [
         2,
         3,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
         "3"
       ],
       "comments": [
         {
-          "nickName": "Xrustik",
-          "text": "sunt aut facere repellat provident"
+          "nickName": "Vital-dnar",
+          "text": "dsadsadasdas",
+          "userId": "3",
+          "avatarUrl": "https://api.multiavatar.com/Copycat.png?apikey=nw1DJY2KPt9Lo8"
         },
         {
-          "nickName": "Andr",
-          "text": "dasdsafdsgsd"
-        },
-        {
-          "id": 2,
-          "avatarUrl": "fsddffsdfsdfds",
-          "nickName": "AndrOOOOO",
-          "text": "dasdsafdsgsd"
-        },
-        {
-          "nickName": "Andr",
-          "text": "dasdsafdsgsd"
-        },
-        {
-          "nickName": "Andr",
-          "text": "dasdsafdsgsd"
-        },
-        {
-          "nickName": "Andr",
-          "text": "dasdsafdsgsd"
-        },
-        {
-          "nickName": "Andr",
-          "text": "dasdsafdsgsd"
-        },
-        {
-          "nickName": "Andr",
-          "text": "dasdsafdsgsd"
-        },
-        {
-          "nickName": "Andr",
-          "text": "dasdsafdsgsd"
-        },
-        {
-          "nickName": "Andr",
-          "text": "dasdsafdsgsd"
-        },
-        {
-          "nickName": "Andr",
-          "text": "dasdsafdsgsd"
-        },
-        {
-          "nickName": "Andr",
-          "text": "sss"
-        },
-        {
-          "nickName": "Andr",
-          "text": "dasasdfdsdfasdsadsa"
-        },
-        {
-          "nickName": "Andr",
-          "text": "sdffdsfds",
-          "userId": "1",
-          "avatarUrl": "https://thumbs.dreamstime.com/b/%D0%B2%D0%B5%D0%BA%D1%82%D0%BE%D1%80-%D0%B7%D0%BD%D0%B0%D1%87%D0%BA%D0%B0-%D0%B1%D0%B8%D0%B7%D0%BD%D0%B5%D1%81%D0%BC%D0%B5%D0%BD%D0%B0-%D0%BC%D1%83%D0%B6%D1%87%D0%B8%D0%BD%D1%8B-%D0%B8%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5-%D0%BF%D1%80%D0%BE%D1%84%D0%B8%D0%BB%D1%8F-%D0%B0%D0%B2%D0%B0%D1%82%D0%B0%D1%80-%D0%BC%D1%83%D0%B6%D1%81%D0%BA%D0%BE%D0%B9-182095609.jpg"
-        },
-        {
-          "nickName": "Andr",
-          "text": "asdasddsaasddsaasd",
-          "userId": "1",
-          "avatarUrl": "https://thumbs.dreamstime.com/b/%D0%B2%D0%B5%D0%BA%D1%82%D0%BE%D1%80-%D0%B7%D0%BD%D0%B0%D1%87%D0%BA%D0%B0-%D0%B1%D0%B8%D0%B7%D0%BD%D0%B5%D1%81%D0%BC%D0%B5%D0%BD%D0%B0-%D0%BC%D1%83%D0%B6%D1%87%D0%B8%D0%BD%D1%8B-%D0%B8%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5-%D0%BF%D1%80%D0%BE%D1%84%D0%B8%D0%BB%D1%8F-%D0%B0%D0%B2%D0%B0%D1%82%D0%B0%D1%80-%D0%BC%D1%83%D0%B6%D1%81%D0%BA%D0%BE%D0%B9-182095609.jpg"
-        },
-        {
-          "nickName": "Andr",
-          "text": "asdsaasd",
-          "userId": "1",
-          "avatarUrl": "https://thumbs.dreamstime.com/b/%D0%B2%D0%B5%D0%BA%D1%82%D0%BE%D1%80-%D0%B7%D0%BD%D0%B0%D1%87%D0%BA%D0%B0-%D0%B1%D0%B8%D0%B7%D0%BD%D0%B5%D1%81%D0%BC%D0%B5%D0%BD%D0%B0-%D0%BC%D1%83%D0%B6%D1%87%D0%B8%D0%BD%D1%8B-%D0%B8%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5-%D0%BF%D1%80%D0%BE%D1%84%D0%B8%D0%BB%D1%8F-%D0%B0%D0%B2%D0%B0%D1%82%D0%B0%D1%80-%D0%BC%D1%83%D0%B6%D1%81%D0%BA%D0%BE%D0%B9-182095609.jpg"
-        },
-        {
-          "nickName": "Andr-TOP",
-          "text": "fdssdfsdf",
-          "userId": "1",
-          "avatarUrl": "https://api.multiavatar.com/Starcrasher.png?apikey=nw1DJY2KPt9Lo8"
-        },
-        {
-          "nickName": "Andr-TOP",
-          "text": "sddfssdfsdf",
-          "userId": "1",
-          "avatarUrl": "https://api.multiavatar.com/Starcrasher.png?apikey=nw1DJY2KPt9Lo8"
-        },
-        {
-          "nickName": "Andr-TOP",
-          "text": "sgdsgdsdggsd",
-          "userId": "1",
-          "avatarUrl": "https://api.multiavatar.com/Starcrasher.png?apikey=nw1DJY2KPt9Lo8"
-        },
-        {
-          "nickName": "Andr-TOP",
-          "text": "dswfsdfsdfsd",
-          "userId": "1",
-          "avatarUrl": "https://api.multiavatar.com/Starcrasher.png?apikey=nw1DJY2KPt9Lo8"
-        },
-        {
-          "nickName": "Andr-TOP",
-          "text": "sdfsdfsdf",
-          "userId": "1",
-          "avatarUrl": "https://api.multiavatar.com/Starcrasher.png?apikey=nw1DJY2KPt9Lo8"
-        },
-        {
-          "nickName": "Andr-TOP",
-          "text": "fdssfdfds",
-          "userId": "1",
-          "avatarUrl": "https://api.multiavatar.com/Starcrasher.png?apikey=nw1DJY2KPt9Lo8"
-        },
-        {
-          "nickName": "Andr-TOP",
-          "text": "fsdsfdsdffd",
-          "userId": "1",
-          "avatarUrl": "https://api.multiavatar.com/Starcrasher.png?apikey=nw1DJY2KPt9Lo8"
-        },
-        {
-          "nickName": "Andr-TOP",
-          "text": "sdgdffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
-          "userId": "1",
-          "avatarUrl": "https://api.multiavatar.com/Starcrasher.png?apikey=nw1DJY2KPt9Lo8"
-        },
-        {
-          "nickName": "Andr-TOP",
-          "text": "sdfsfdfsdfsdsfdfsd",
-          "userId": "1",
-          "avatarUrl": "https://api.multiavatar.com/Starcrasher.png?apikey=nw1DJY2KPt9Lo8"
+          "nickName": "Vital-dnar",
+          "text": "fasdsdasdsaasd",
+          "userId": "3",
+          "avatarUrl": "https://api.multiavatar.com/Copycat.png?apikey=nw1DJY2KPt9Lo8"
         },
         {
           "nickName": "Olga",
-          "text": "dsfdssaddsad",
-          "userId": "2",
-          "avatarUrl": "https://thumbs.dreamstime.com/b/%D0%B2%D0%B5%D0%BA%D1%82%D0%BE%D1%80-%D0%B7%D0%BD%D0%B0%D1%87%D0%BA%D0%B0-%D0%B1%D0%B8%D0%B7%D0%BD%D0%B5%D1%81%D0%BC%D0%B5%D0%BD%D0%B0-%D0%BC%D1%83%D0%B6%D1%87%D0%B8%D0%BD%D1%8B-%D0%B8%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5-%D0%BF%D1%80%D0%BE%D1%84%D0%B8%D0%BB%D1%8F-%D0%B0%D0%B2%D0%B0%D1%82%D0%B0%D1%80-%D0%BC%D1%83%D0%B6%D1%81%D0%BA%D0%BE%D0%B9-182095609.jpg"
-        },
-        {
-          "nickName": "Olga",
-          "text": "asddasadsadsadsdasdas",
-          "userId": "2",
-          "avatarUrl": "https://thumbs.dreamstime.com/b/%D0%B2%D0%B5%D0%BA%D1%82%D0%BE%D1%80-%D0%B7%D0%BD%D0%B0%D1%87%D0%BA%D0%B0-%D0%B1%D0%B8%D0%B7%D0%BD%D0%B5%D1%81%D0%BC%D0%B5%D0%BD%D0%B0-%D0%BC%D1%83%D0%B6%D1%87%D0%B8%D0%BD%D1%8B-%D0%B8%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5-%D0%BF%D1%80%D0%BE%D1%84%D0%B8%D0%BB%D1%8F-%D0%B0%D0%B2%D0%B0%D1%82%D0%B0%D1%80-%D0%BC%D1%83%D0%B6%D1%81%D0%BA%D0%BE%D0%B9-182095609.jpg"
-        },
-        {
-          "nickName": "Olga",
-          "text": "adsdsadsadas",
+          "text": "sadadsadsdsa",
           "userId": "2",
           "avatarUrl": "https://api.multiavatar.com/zoe.svg"
         },
         {
           "nickName": "Olga",
-          "text": "assaddsaasfsa",
+          "text": "fsasfsaassdaasddasasd",
           "userId": "2",
           "avatarUrl": "https://api.multiavatar.com/zoe.svg"
         },
         {
           "nickName": "Xrusti40k",
-          "text": "Я так люблю свого Андрійка\n",
+          "text": "Я люлю свого Андрійка",
           "userId": "4",
           "avatarUrl": "https://api.multiavatar.com/kathrin.svg"
-        },
-        {
-          "nickName": "Vital-dnar",
-          "text": "xdfvdsfgd",
-          "userId": "3",
-          "avatarUrl": "https://api.multiavatar.com/Copycat.png?apikey=nw1DJY2KPt9Lo8"
-        },
-        {
-          "nickName": "Vital-dnar",
-          "text": "dfssdfsfd",
-          "userId": "3",
-          "avatarUrl": "https://api.multiavatar.com/Copycat.png?apikey=nw1DJY2KPt9Lo8"
-        },
-        {
-          "nickName": "Vital-dnar",
-          "text": "dsdfssfdfsd",
-          "userId": "3",
-          "avatarUrl": "https://api.multiavatar.com/Copycat.png?apikey=nw1DJY2KPt9Lo8"
-        },
-        {
-          "nickName": "Vital-dnar",
-          "text": "sdfsfdfsdffffff",
-          "userId": "3",
-          "avatarUrl": "https://api.multiavatar.com/Copycat.png?apikey=nw1DJY2KPt9Lo8"
-        },
-        {
-          "nickName": "Vital-dnar",
-          "text": "ddd",
-          "userId": "3",
-          "avatarUrl": "https://api.multiavatar.com/Copycat.png?apikey=nw1DJY2KPt9Lo8"
-        },
-        {
-          "nickName": "Vital-dnar",
-          "text": "fdssdf",
-          "userId": "3",
-          "avatarUrl": "https://api.multiavatar.com/Copycat.png?apikey=nw1DJY2KPt9Lo8"
-        },
-        {
-          "nickName": "Vital-dnar",
-          "text": "sdffsdsfd",
-          "userId": "3",
-          "avatarUrl": "https://api.multiavatar.com/Copycat.png?apikey=nw1DJY2KPt9Lo8"
-        },
-        {
-          "nickName": "Vital-dnar",
-          "text": "dfssdfsdfsdf",
-          "userId": "3",
-          "avatarUrl": "https://api.multiavatar.com/Copycat.png?apikey=nw1DJY2KPt9Lo8"
-        },
-        {
-          "nickName": "Vital-dnar",
-          "text": "dsfsdfsfd",
-          "userId": "3",
-          "avatarUrl": "https://api.multiavatar.com/Copycat.png?apikey=nw1DJY2KPt9Lo8"
-        },
-        {
-          "nickName": "Vital-dnar",
-          "text": "dfsfds",
-          "userId": "3",
-          "avatarUrl": "https://api.multiavatar.com/Copycat.png?apikey=nw1DJY2KPt9Lo8"
-        },
-        {
-          "nickName": "Vital-dnar",
-          "text": "fsdsdf",
-          "userId": "3",
-          "avatarUrl": "https://api.multiavatar.com/Copycat.png?apikey=nw1DJY2KPt9Lo8"
-        },
-        {
-          "nickName": "Vital-dnar",
-          "text": "dsffsd",
-          "userId": "3",
-          "avatarUrl": "https://api.multiavatar.com/Copycat.png?apikey=nw1DJY2KPt9Lo8"
-        },
-        {
-          "nickName": "Vital-dnar",
-          "text": "sdffdsfsd",
-          "userId": "3",
-          "avatarUrl": "https://api.multiavatar.com/Copycat.png?apikey=nw1DJY2KPt9Lo8"
-        },
-        {
-          "nickName": "Vital-dnar",
-          "text": "dsfdfssdfsdf",
-          "userId": "3",
-          "avatarUrl": "https://api.multiavatar.com/Copycat.png?apikey=nw1DJY2KPt9Lo8"
-        },
-        {
-          "nickName": "Vital-dnar",
-          "text": "sdads",
-          "userId": "3",
-          "avatarUrl": "https://api.multiavatar.com/Copycat.png?apikey=nw1DJY2KPt9Lo8"
-        },
-        {
-          "nickName": "Vital-dnar",
-          "text": "saddasdas",
-          "userId": "3",
-          "avatarUrl": "https://api.multiavatar.com/Copycat.png?apikey=nw1DJY2KPt9Lo8"
-        },
-        {
-          "nickName": "Vital-dnar",
-          "text": "asdasdasddas",
-          "userId": "3",
-          "avatarUrl": "https://api.multiavatar.com/Copycat.png?apikey=nw1DJY2KPt9Lo8"
-        },
-        {
-          "nickName": "Vital-dnar",
-          "text": "sdfsfdsfd",
-          "userId": "3",
-          "avatarUrl": "https://api.multiavatar.com/Copycat.png?apikey=nw1DJY2KPt9Lo8"
-        },
-        {
-          "nickName": "Vital-dnar",
-          "text": "fsdsdfdfsdfs",
-          "userId": "3",
-          "avatarUrl": "https://api.multiavatar.com/Copycat.png?apikey=nw1DJY2KPt9Lo8"
-        },
-        {
-          "nickName": "Vital-dnar",
-          "text": "dsfsfd",
-          "userId": "3",
-          "avatarUrl": "https://api.multiavatar.com/Copycat.png?apikey=nw1DJY2KPt9Lo8"
-        },
-        {
-          "nickName": "Vital-dnar",
-          "text": "dsfsfdsdf",
-          "userId": "3",
-          "avatarUrl": "https://api.multiavatar.com/Copycat.png?apikey=nw1DJY2KPt9Lo8"
-        },
-        {
-          "nickName": "Vital-dnar",
-          "text": "sadads",
-          "userId": "3",
-          "avatarUrl": "https://api.multiavatar.com/Copycat.png?apikey=nw1DJY2KPt9Lo8"
-        },
-        {
-          "nickName": "Vital-dnar",
-          "text": "asddasadsads",
-          "userId": "3",
-          "avatarUrl": "https://api.multiavatar.com/Copycat.png?apikey=nw1DJY2KPt9Lo8"
-        },
-        {
-          "nickName": "Vital-dnar",
-          "text": "dfssfd",
-          "userId": "3",
-          "avatarUrl": "https://api.multiavatar.com/Copycat.png?apikey=nw1DJY2KPt9Lo8"
-        },
-        {
-          "nickName": "Vital-dnar",
-          "text": "sdfsdffsd",
-          "userId": "3",
-          "avatarUrl": "https://api.multiavatar.com/Copycat.png?apikey=nw1DJY2KPt9Lo8"
-        },
-        {
-          "nickName": "Vital-dnar",
-          "text": "dssdfsfd",
-          "userId": "3",
-          "avatarUrl": "https://api.multiavatar.com/Copycat.png?apikey=nw1DJY2KPt9Lo8"
-        },
-        {
-          "nickName": "Vital-dnar",
-          "text": "sdffdsfsdfds",
-          "userId": "3",
-          "avatarUrl": "https://api.multiavatar.com/Copycat.png?apikey=nw1DJY2KPt9Lo8"
-        },
-        {
-          "nickName": "Vital-dnar",
-          "text": "adssdffsd",
-          "userId": "3",
-          "avatarUrl": "https://api.multiavatar.com/Copycat.png?apikey=nw1DJY2KPt9Lo8"
-        },
-        {
-          "nickName": "Vital-dnar",
-          "text": "sdfsdfsdfsd",
-          "userId": "3",
-          "avatarUrl": "https://api.multiavatar.com/Copycat.png?apikey=nw1DJY2KPt9Lo8"
-        },
-        {
-          "nickName": "Vital-dnar",
-          "text": "dfssdffsdsfd",
-          "userId": "3",
-          "avatarUrl": "https://api.multiavatar.com/Copycat.png?apikey=nw1DJY2KPt9Lo8"
-        },
-        {
-          "nickName": "Vital-dnar",
-          "text": "ddd",
-          "userId": "3",
-          "avatarUrl": "https://api.multiavatar.com/Copycat.png?apikey=nw1DJY2KPt9Lo8"
-        },
-        {
-          "nickName": "Vital-dnar",
-          "text": "ffffdfd",
-          "userId": "3",
-          "avatarUrl": "https://api.multiavatar.com/Copycat.png?apikey=nw1DJY2KPt9Lo8"
-        },
-        {
-          "nickName": "Vital-dnar",
-          "text": "fddf",
-          "userId": "3",
-          "avatarUrl": "https://api.multiavatar.com/Copycat.png?apikey=nw1DJY2KPt9Lo8"
-        },
-        {
-          "nickName": "Vital-dnar",
-          "text": "fff",
-          "userId": "3",
-          "avatarUrl": "https://api.multiavatar.com/Copycat.png?apikey=nw1DJY2KPt9Lo8"
-        },
-        {
-          "nickName": "Vital-dnar",
-          "text": "sfdsfdfsddddfff",
-          "userId": "3",
-          "avatarUrl": "https://api.multiavatar.com/Copycat.png?apikey=nw1DJY2KPt9Lo8"
-        },
-        {
-          "nickName": "Vital-dnar",
-          "text": "dddddfsssss",
-          "userId": "3",
-          "avatarUrl": "https://api.multiavatar.com/Copycat.png?apikey=nw1DJY2KPt9Lo8"
-        },
-        {
-          "nickName": "Vital-dnar",
-          "text": "asdasddsaads",
-          "userId": "3",
-          "avatarUrl": "https://api.multiavatar.com/Copycat.png?apikey=nw1DJY2KPt9Lo8"
-        },
-        {
-          "nickName": "Vital-dnar",
-          "text": "asfasfasf",
-          "userId": "3",
-          "avatarUrl": "https://api.multiavatar.com/Copycat.png?apikey=nw1DJY2KPt9Lo8"
-        },
-        {
-          "nickName": "Vital-dnar",
-          "text": "adsasdads",
-          "userId": "3",
-          "avatarUrl": "https://api.multiavatar.com/Copycat.png?apikey=nw1DJY2KPt9Lo8"
-        },
-        {
-          "nickName": "Vital-dnar",
-          "text": "dfggdfgfd",
-          "userId": "3",
-          "avatarUrl": "https://api.multiavatar.com/Copycat.png?apikey=nw1DJY2KPt9Lo8"
-        },
-        {
-          "nickName": "Vital-dnar",
-          "text": "dfgfddfg",
-          "userId": "3",
-          "avatarUrl": "https://api.multiavatar.com/Copycat.png?apikey=nw1DJY2KPt9Lo8"
-        },
-        {
-          "nickName": "Vital-dnar",
-          "text": "dddd",
-          "userId": "3",
-          "avatarUrl": "https://api.multiavatar.com/Copycat.png?apikey=nw1DJY2KPt9Lo8"
-        },
-        {
-          "nickName": "Vital-dnar",
-          "text": "sfdsfsd",
-          "userId": "3",
-          "avatarUrl": "https://api.multiavatar.com/Copycat.png?apikey=nw1DJY2KPt9Lo8"
-        },
-        {
-          "nickName": "Vital-dnar",
-          "text": "dsfsfdfds",
-          "userId": "3",
-          "avatarUrl": "https://api.multiavatar.com/Copycat.png?apikey=nw1DJY2KPt9Lo8"
-        },
-        {
-          "nickName": "Vital-dnar",
-          "text": "sasdffsd",
-          "userId": "3",
-          "avatarUrl": "https://api.multiavatar.com/Copycat.png?apikey=nw1DJY2KPt9Lo8"
-        },
-        {
-          "nickName": "Vital-dnar",
-          "text": "sdffsdfsdfsddsffds",
-          "userId": "3",
-          "avatarUrl": "https://api.multiavatar.com/Copycat.png?apikey=nw1DJY2KPt9Lo8"
-        },
-        {
-          "text": "dsfsdfd",
-          "userId": "3",
-          "avatarUrl": "https://api.multiavatar.com/Copycat.png?apikey=nw1DJY2KPt9Lo8"
-        },
-        {
-          "text": "fsdfdsfdsdfdfsdfssdfffffffsdfdsfdsdfdfsdfssdfffffffsdfdsfdsdfdfsdfssdfffffffsdfdsfdsdfdfsdfssdfffffffsdfdsfdsdfdfsdfssdfffffffsdfdsfdsdfdfsdfssdfffffffsdfdsfdsdfdfsdfssdfffffffsdfdsfdsdfdfsdfssdfffffffsdfdsfdsdfdfsdfssdffffff",
-          "userId": "3",
-          "avatarUrl": "https://api.multiavatar.com/Copycat.png?apikey=nw1DJY2KPt9Lo8"
-        },
-        {
-          "nickName": "Vital-dnar",
-          "text": "fghgfghf",
-          "userId": "3",
-          "avatarUrl": "https://api.multiavatar.com/Copycat.png?apikey=nw1DJY2KPt9Lo8"
         }
       ],
       "author": {
@@ -772,6 +338,18 @@
           "text": "sadsadas",
           "userId": "2",
           "avatarUrl": "https://api.multiavatar.com/zoe.svg"
+        },
+        {
+          "nickName": "Xrusti40k",
+          "text": "апвваав",
+          "userId": "4",
+          "avatarUrl": "https://api.multiavatar.com/kathrin.svg"
+        },
+        {
+          "nickName": "Xrusti40k",
+          "text": "fdgfdfdsfsd",
+          "userId": "4",
+          "avatarUrl": "https://api.multiavatar.com/kathrin.svg"
         }
       ],
       "author": {

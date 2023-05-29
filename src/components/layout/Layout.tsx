@@ -12,10 +12,11 @@ export const Layout: React.FC<LayoutProps> = ({
   avatarUrl,
   userId,
   children,
+
 }) => {
   return (
     <div className='cnLayoutRoot'>
-      <Navbar nickName={nickName} avatarUrl={avatarUrl} userId={userId} />
+      <Navbar   nickName={nickName} avatarUrl={avatarUrl} userId={userId} />
       <div className='cnLayoutBody'>{children}</div>
     </div>
   );

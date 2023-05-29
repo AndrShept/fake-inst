@@ -12,7 +12,7 @@ export const UserBadge: React.FC<UserTypes> = ({ nickName, avatarUrl, userId }) 
   return (
     <div className='cnBadgeRoot' onClick={onUserBadgeClick}>
       {avatarUrl ? (
-        <img src={avatarUrl} alt='logo' className='cnUserBadgeAvatar' />
+        <img src={avatarUrl}  alt='logo' className='cnUserBadgeAvatar' />
       ) : (
         <div className='cnBadgePlaceHolder' />
       )}

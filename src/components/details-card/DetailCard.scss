@@ -1,133 +1,147 @@
-.cnDetailCardRoot{
-display: flex;
-flex-direction: column;
-width: 600px;
-border: 1px solid #dbdbdb;
-box-shadow: 0 2px 4px rgba($color: #000000, $alpha: 0.2);
+.cnDetailCardRoot {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  border: 1px solid #dbdbdb;
+  box-shadow: 0 2px 4px rgba($color: #000000, $alpha: 0.2);
 }
-.cnDetailCardHeader{
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    height: 60px;
-    padding-left: 20px;
-    background-color: #fff;
-
-}
-
-.cnDetailCardImg{
-    height: 300px;
-    width: 100%;
-    object-fit: cover;
-
+.cnDetailCardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  height: 60px;
+  padding-left: 20px;
+  background-color: #fff;
 }
 
-.cnDetailCardButtons{
-    display: flex;
-    padding: 10px;
-
+.cnDetailCardImg {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
 }
 
-
-.cnDetailCardLikes{
-
-    font-size: 14px;
-    font-weight: 600;
-    padding: 10px;
+.cnDetailCardButtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 2px;
+  width: 70px;
+  gap: 10px;
+  background-color: #ececec;
+  border-radius: 7px;
+  margin-left: 10px;
 }
 
-.cnDetailCardComments{
-    display: flex;
-    flex-direction: column;
-    padding: 0 10px 10px 10px;
-
+.cnDetailCardLikes {
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px;
 }
 
-.cnDetailCardLikeIcon{
-    margin-right: 6px;
-    cursor: pointer;
-    color: red;
-
-    // &:hover{
-    //   border-radius: 2px;
-    //   padding: 40px;
-    // }
-
-
-}
-.cnDetailCardLikeIconFull{
-    margin-right: 6px;
-    cursor: pointer;
-    color: red;
-
-
+.cnDetailCardComments {
+  display: flex;
+  flex-direction: column;
+  padding: 0 10px 10px 10px;
 }
 
-.cnDetailCardCommentsIcon{
-    cursor: pointer;
-}
+.cnDetailCardLikeIcon {
+  cursor: pointer;
+  color: red;
 
-
-
-.cnShowButtonOpenComments{
-    margin-top: 10px;
-    font-weight: 600;
-    color: rgb(46, 32, 247);
-    cursor: pointer;
-    &:hover{
-        color:darken(rgb(46, 32, 247), 15%) ;
-    }
-}
-
-.cnShowButtonHideComments{
-    margin-top: 10px;
-    font-weight: 600;
-    color: rgb(46, 32, 247);
-    cursor: pointer;
-    &:hover{
-        color:darken(rgb(46, 32, 247), 15%) ;
-    }
-}
-.cnDetailCardTextAreaWrapper{
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    justify-content: center;
-    align-items: center;
-    
-}
-
-.cnDetailCardTextArea{
-    width: 100%;
-    border: none;
-    background-color: white;
-    padding: 10px;
-    outline: none;
-    resize: none;
-    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-    font-size: 16px;
-    border-radius: 7px;
-
-
-}
-
-
-.cnDetailCardTextAreaButton{
-    // justify-self: self-end;
-    padding: 10px;
-    outline: none;
-    border: none;
-    cursor: pointer;
-    background-color: #2196F3;
-    color: white;
-    border-radius: 5px;
-    // width: 50%;
-    align-self: self-end;
-    margin-top: 10px;
+  &:active {
+    transform: scale(1.3);
     transition: 0.3s;
-    &:Hover{
-        background-color: darken( #2196F3, 10%);
-    }
-    
+    //   padding: 40px;
+  }
+  &:hover {
+    transform: scale(1.2);
+    //   padding: 40px;
+    transition: 0.3s;
+  }
+}
+.cnDetailCardLikeIconFull {
+  // margin-right: 6px;
+  cursor: pointer;
+  color: red;
+  &:active {
+    transform: scale(1.3);
+    transition: 0.3s;
+    //   padding: 40px;
+  }
+  &:hover {
+    transform: scale(1.2);
+    //   padding: 40px;
+    transition: 0.3s;
+  }
+}
 
+.cnDetailCardCommentsIcon {
+  cursor: pointer;
+  &:active {
+    transform: scale(1.3);
+    transition: 0.2s;
+    //   padding: 40px;
+  }
+  &:hover {
+    transform: scale(1.2);
+    //   padding: 40px;
+    transition: 0.2s;
+  }
+}
+
+.cnShowButtonOpenComments {
+  margin-top: 10px;
+  font-weight: 600;
+  color: rgb(46, 32, 247);
+  cursor: pointer;
+  &:hover {
+    color: darken(rgb(46, 32, 247), 15%);
+  }
+}
+
+.cnShowButtonHideComments {
+  margin-top: 10px;
+  font-weight: 600;
+  color: rgb(46, 32, 247);
+  cursor: pointer;
+  &:hover {
+    color: darken(rgb(46, 32, 247), 15%);
+  }
+}
+.cnDetailCardTextAreaWrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.cnDetailCardTextArea {
+  width: 100%;
+  border: none;
+  background-color: white;
+  padding: 10px;
+  outline: none;
+  resize: none;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  border-radius: 7px;
+}
+
+.cnDetailCardTextAreaButton {
+  // justify-self: self-end;
+  padding: 10px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background-color: #2196f3;
+  color: white;
+  border-radius: 5px;
+  // width: 50%;
+  align-self: self-end;
+  margin-top: 10px;
+  transition: 0.3s;
+  &:hover {
+    background-color: darken(#2196f3, 10%);
+  }
 }

@@ -29,6 +29,9 @@ export const MainPage: React.FC = () => {
 
   return (
     <Layout
+    firstName={authorizedUser.firstName}
+    lastName={authorizedUser.lastName}
+
       nickName={authorizedUser.nickName}
       userId={authorizedUser.id}
       avatarUrl={authorizedUser.avatarUrl}

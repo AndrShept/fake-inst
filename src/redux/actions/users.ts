@@ -21,7 +21,7 @@ export const fetchUsers = (id = 1): any => {
 };
 export const fetchAuthorizedUsers = (): any => {
   return async (dispatch: Dispatch<UsersAction>) => {
-    const response = await axios.get(`http://localhost:3000/users/3`);
+    const response = await axios.get(`http://localhost:3000/users/4`);
     dispatch({
       type: UsersActionTypes.FETCH_AUTHORIZED_USER,
       payload: response.data,
