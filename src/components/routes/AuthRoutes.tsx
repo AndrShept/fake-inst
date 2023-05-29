@@ -1,20 +1,20 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 import { MainPage } from '../../pages/main-page/MainPage';
-import { UserBadge } from '../user-badge/UserBadge';
 import { NonAccessPage } from '../../pages/non-access-page/NonAccessPage';
 import { useAppDispatch, useAppSelector } from '../../hooks/hooks';
 import { Routes } from 'react-router-dom';
 import nextId from 'react-id-generator';
 import { setAuthUsers } from '../../redux/actions/users';
+import { UsersPage } from '../../pages/users-page/UsersPage';
 
 const authRoutes = [
   { path: '/', element: <MainPage /> },
-  { path: 'users/:id', element: <UserBadge /> },
+  { path: '/users/:id', element: <UsersPage /> },
 ];
 
 export const AuthRoutes: React.FC = () => {
-  const userAuth = useAppSelector((state) => state.users.userAuth);
+  const userAuth = useAppSelector((state) => state.users);
   const dispatch = useAppDispatch();
 
   React.useEffect(() => {
@@ -30,7 +30,6 @@ export const AuthRoutes: React.FC = () => {
           <Route path='/' element={<NonAccessPage />} />
         )}
       </Routes>
-    
     </div>
   );
 };

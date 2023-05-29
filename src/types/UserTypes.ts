@@ -1,9 +1,22 @@
 export type UserTypes = {
   nickName?: string;
   avatarUrl?: string;
-  userId: number| string;
-
+  userId?: number | string;
+  firstName?: string;
+  lastName?: string;
+  subscribed?: number[];
+  subscribers?: number[];
 };
+
+export interface AuthorizedUserTypes extends Omit<UserTypes, 'userId'> {
+  id?: string;
+}
+export interface UserState {
+  user: UserTypes[];
+  isUserLoading: boolean;
+  userAuth: boolean;
+  authorizedUser: AuthorizedUserTypes;
+}
 
 export enum UsersActionTypes {
   FETCH_USERS_START = 'FETCH_USERS_START',
@@ -18,7 +31,7 @@ export interface FetchUsersStartActions {
 }
 export interface FetchUsersSuccessActions {
   type: UsersActionTypes.FETCH_USERS_SUCCESS;
-  payload: any;
+  payload: UserTypes[];
 }
 export interface FetchUsersFailActions {
   type: UsersActionTypes.FETCH_USERS_FAIL;
@@ -27,7 +40,7 @@ export interface FetchUsersFailActions {
 
 export interface FetchAuthorizedUsersActions {
   type: UsersActionTypes.FETCH_AUTHORIZED_USER;
-  payload: any;
+  payload: AuthorizedUserTypes;
 }
 export interface SethUsersAuthActions {
   type: UsersActionTypes.IS_USERS_AUTH;

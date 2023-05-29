@@ -4,7 +4,7 @@ export interface PhotoTypes {
   imgUrl: string;
   likes: string[];
   comments: CommentsTypes[]
-  author: { id: number; nickName: string; avatarUrl: string };
+  author: AuthorTypes;
   title: string;
   body: string;
 }
@@ -14,6 +14,12 @@ export interface CommentsTypes {
   text: string;
   avatarUrl?: string;
   userId: number | string
+}
+
+export interface AuthorTypes {
+  id: number; 
+  nickName: string; 
+  avatarUrl: string 
 }
 
 export enum PhotoActionTypes {

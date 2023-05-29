@@ -53,7 +53,6 @@ export const toggleLike = (userId: string, id: number): any => {
         (item: string) => item !== userId
       );
     }
-    console.log(newPhotos);
     try {
       const response = await axios.put(`http://localhost:3000/posts/${id}`, {
         ...newPhotos,
@@ -77,7 +76,6 @@ return async (dispatch:Dispatch<PhotoAction>, getState: ()=> RootState) => {
 
   const {photos} = getState()
   const findPhotos = photos.photos.find((item) => item.id === id);
-  console.log(findPhotos)
   const findIndex = photos.photos.findIndex((item) => item.id === id);
   const NewPhotos = findPhotos
   NewPhotos!.comments = [...findPhotos!.comments, {nickName, text, userId, avatarUrl} ]

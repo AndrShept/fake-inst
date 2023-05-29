@@ -6,7 +6,7 @@ import './UserBadge.scss';
 export const UserBadge: React.FC<UserTypes> = ({ nickName, avatarUrl, userId }) => {
   const navigate = useNavigate();
   const onUserBadgeClick = () => {
-    navigate(`users/${userId}`);
+    navigate(`/users/${userId}`);
   };
 
   return (

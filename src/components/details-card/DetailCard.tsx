@@ -6,9 +6,9 @@ import './DetailCard.scss';
 import { Comment } from '../comment/Comment';
 import cn from 'classnames';
 import nextId from 'react-id-generator';
-import { useAppDispatch } from '../../hooks/hooks';
+import { useAppDispatch, useAppSelector } from '../../hooks/hooks';
 import { setComment, toggleLike } from '../../redux/actions/photos';
-import { CommentsTypes } from '../../types/photoTypes';
+import { CommentsTypes, AuthorTypes } from '../../types/photoTypes';
 
 interface DetailCardProps {
   userName: string;
@@ -17,9 +17,10 @@ interface DetailCardProps {
   imgUrl: string;
   likes: number;
   isLikedByYou: boolean;
-  comments: CommentsTypes[]
+  comments: CommentsTypes[];
   className: string;
   id: number;
+  author: AuthorTypes;
 }
 
 export const DetailCard: React.FC<DetailCardProps> = ({
@@ -32,10 +33,13 @@ export const DetailCard: React.FC<DetailCardProps> = ({
   comments,
   className,
   id,
+  author,
 }) => {
+  const ref = React.useRef<HTMLTextAreaElement>(null);
   const [isToggleSetComment, setIsToggleSetComment] = React.useState(false);
   const [textComment, setTextComment] = React.useState('');
   const [isShowComments, setIsShowComments] = React.useState(true);
+  const { isMutateLoading } = useAppSelector((state) => state.photos);
   const dispatch = useAppDispatch();
   const sendComment = () => {
     if (textComment.trim()) {
@@ -45,9 +49,14 @@ export const DetailCard: React.FC<DetailCardProps> = ({
       return <p>Ведіть якісь дані</p>;
     }
   };
-  const hadleClickCommentIcon= () =>{
-    setIsToggleSetComment(!isToggleSetComment)
-  }
+  const hadleClickCommentIcon = () => {
+    
+    setIsToggleSetComment(!isToggleSetComment);
+    setTimeout(()=>
+    ref?.current?.focus() , 100)
+    
+    
+  };
   const handleLike = () => {
     dispatch(toggleLike(userId, id));
   };
@@ -64,10 +73,11 @@ export const DetailCard: React.FC<DetailCardProps> = ({
       return (
         <>
           {sliceComments.map((comment) => (
-            <Comment {...comment} key={nextId()} />
+            <div key={nextId()}>
+              <Comment {...comment} />
+            </div>
           ))}
           <p>
-            {' '}
             <span
               onClick={handleShowComments}
               className='cnShowButtonOpenComments'
@@ -98,7 +108,11 @@ export const DetailCard: React.FC<DetailCardProps> = ({
   return (
     <div className={cn(className, 'cnDetailCardRoot')}>
       <div className='cnDetailCardHeader'>
-        <UserBadge nickName={userName} avatarUrl={avatarUrl} userId={userId} />
+        <UserBadge
+          nickName={author.nickName}
+          avatarUrl={author.avatarUrl}
+          userId={author.id}
+        />
       </div>
       <div>
         <img src={imgUrl} alt='imgUrl' className='cnDetailCardImg' />
@@ -118,9 +132,17 @@ export const DetailCard: React.FC<DetailCardProps> = ({
           />
         )}
         {isToggleSetComment ? (
-          <FaComment onClick={hadleClickCommentIcon} className='cnDetailCardCommentsIcon' size={18} />
+          <FaComment
+            onClick={hadleClickCommentIcon}
+            className='cnDetailCardCommentsIcon'
+            size={18}
+          />
         ) : (
-          <FaRegComment onClick={hadleClickCommentIcon} className='cnDetailCardCommentsIcon' size={18} />
+          <FaRegComment
+            onClick={hadleClickCommentIcon}
+            className='cnDetailCardCommentsIcon'
+            size={18}
+          />
         )}
       </div>
       <div className='cnDetailCardLikes'>{`like ${likes} user`}</div>
@@ -128,6 +150,7 @@ export const DetailCard: React.FC<DetailCardProps> = ({
       {isToggleSetComment && (
         <div className='cnDetailCardTextAreaWrapper'>
           <textarea
+            ref={ref}
             value={textComment}
             onChange={(e) => setTextComment(e.target.value)}
             name=''
@@ -137,7 +160,11 @@ export const DetailCard: React.FC<DetailCardProps> = ({
             placeholder='Коментарій...'
             className='cnDetailCardTextArea'
           ></textarea>
-          <button  onClick={sendComment} className='cnDetailCardTextAreaButton'>
+          <button
+            
+            onClick={sendComment}
+            className='cnDetailCardTextAreaButton'
+          >
             Відправити
           </button>
         </div>

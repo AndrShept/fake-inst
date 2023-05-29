@@ -1,11 +1,11 @@
 import { combineReducers } from 'redux';
 import { photosReducer } from './photosReducer';
-import { userReducer } from './usersReducer';
+import { usersReducer } from './usersReducer';
 
 
 export const rootReducer = combineReducers({
     photos: photosReducer,
-    users: userReducer
+    users: usersReducer,
 })
 
 

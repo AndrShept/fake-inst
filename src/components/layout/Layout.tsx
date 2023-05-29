@@ -1,24 +1,21 @@
 import React from 'react';
 import { Navbar } from '../navbar/Navbar';
-import './Layout.scss'
+import './Layout.scss';
+import { UserTypes } from '../../types/userTypes';
 
-type LayoutProps = {
-    
-  nickName?: string;
-  avatarUrl?: string;
-  id?: number;
+interface LayoutProps extends UserTypes {
   children: React.ReactNode;
-};
+}
 
-export const Layout: React.FC<LayoutProps > = ({
+export const Layout: React.FC<LayoutProps> = ({
   nickName,
   avatarUrl,
-  id,
+  userId,
   children,
 }) => {
   return (
     <div className='cnLayoutRoot'>
-      <Navbar nickName={nickName} avatarUrl={avatarUrl} id={id}/>
+      <Navbar nickName={nickName} avatarUrl={avatarUrl} userId={userId} />
       <div className='cnLayoutBody'>{children}</div>
     </div>
   );

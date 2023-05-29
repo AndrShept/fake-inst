@@ -2,6 +2,7 @@ import React from 'react';
 import { UserBadge } from '../user-badge/UserBadge';
 import { CommentsTypes } from '../../types/photoTypes';
 import './Comment.scss'
+import {motion} from 'framer-motion'
 
 export const Comment: React.FC<CommentsTypes> = ({
   nickName,
@@ -10,13 +11,14 @@ export const Comment: React.FC<CommentsTypes> = ({
   avatarUrl,
 }) => {
   return (
-    <div className='cnCommentRoot'>
+   
+    <div   className='cnCommentRoot'>
       <UserBadge nickName={nickName} userId={userId} avatarUrl={avatarUrl} />
-      {/* <span className='cnCommentName'>{nickName}</span> */}
 
       <div >
         <p className='cnCommentText'>{text}</p>
       </div>
     </div>
+    
   );
 };
