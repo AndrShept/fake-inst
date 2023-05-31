@@ -13,7 +13,7 @@ import { CommentsTypes, AuthorTypes } from '../../types/photoTypes';
 interface DetailCardProps {
   userName: string;
   avatarUrl: string;
-  userId: string;
+  userId: number ;
   imgUrl: string;
   likes: number;
   isLikedByYou: boolean;
@@ -50,12 +50,8 @@ export const DetailCard: React.FC<DetailCardProps> = ({
     }
   };
   const hadleClickCommentIcon = () => {
-    
     setIsToggleSetComment(!isToggleSetComment);
-    setTimeout(()=>
-    ref?.current?.focus() , 100)
-    
-    
+    setTimeout(() => ref?.current?.focus(), 100);
   };
   const handleLike = () => {
     dispatch(toggleLike(userId, id));
@@ -77,7 +73,7 @@ export const DetailCard: React.FC<DetailCardProps> = ({
               <Comment {...comment} />
             </div>
           ))}
-          <p>
+          <p style={{ marginTop: '15px' }}>
             <span
               onClick={handleShowComments}
               className='cnShowButtonOpenComments'
@@ -160,11 +156,7 @@ export const DetailCard: React.FC<DetailCardProps> = ({
             placeholder='Коментарій...'
             className='cnDetailCardTextArea'
           ></textarea>
-          <button
-            
-            onClick={sendComment}
-            className='cnDetailCardTextAreaButton'
-          >
+          <button onClick={sendComment} className='cnDetailCardTextAreaButton'>
             Відправити
           </button>
         </div>

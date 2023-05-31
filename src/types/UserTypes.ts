@@ -1,7 +1,7 @@
 export type UserTypes = {
   nickName?: string;
   avatarUrl?: string;
-  userId?: number | string;
+  userId?:  number;
   firstName?: string;
   lastName?: string;
   subscribed?: number[];
@@ -11,7 +11,7 @@ export type UserTypes = {
 };
 
 export interface AuthorizedUserTypes extends Omit<UserTypes, 'userId'> {
-  id?: string;
+  id?: number;
 }
 export interface UserState {
   user: UserTypes[];

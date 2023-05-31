@@ -3,10 +3,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  
 }
 
 .cnMainPageCard {
+  border: none;
   margin-bottom: 30px;
+  border-radius: 30px;
+
+  // padding: 20px;
+  background-color: #e0e3e6;
 }
 
 .cnMainLoaderContainer {

@@ -6,6 +6,7 @@
   box-shadow: 0 2px 4px rgba($color: #000000, $alpha: 0.2);
   &:hover .cnCardHover {
     display: flex;
+    
   }
   &:hover .cnCardIcons {
     display: flex;
@@ -30,7 +31,7 @@
   background-color: #0000006e;
   border-radius: inherit;
   z-index: 1;
-
+ 
 }
 
 .cnCardIcons {
@@ -43,4 +44,25 @@
   bottom: 0;
   right: 0;
   z-index: 2;
+}
+
+.cnCardNumber {
+  margin-left: 5px;
+  color: white;
+  font-size: 20px;
+  line-height: 20px;
+  margin-right: 10px;
+}
+
+.cnCardIcon {
+  color: white;
+  cursor: pointer;
+  &:active {
+    transform: scale(1.3);
+    transition: 0.3s;
+  }
+  &:hover {
+    transform: scale(1.2);
+    transition: 0.3s;
+  }
 }

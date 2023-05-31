@@ -10,6 +10,11 @@ width: 40px;
 height: 40px;
 margin-right: 10px;
 border-radius: 50%;
+border: 3px solid transparent;
+&:hover{
+    border: 3px solid rgb(187, 187, 190);
+    transition: 0.3s;
+}
 }
 
 .cnBadgePlaceHolder{

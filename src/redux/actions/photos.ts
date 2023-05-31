@@ -37,7 +37,7 @@ export const fetchPhotos = (page = 1, limit = 5): any => {
   };
 };
 
-export const toggleLike = (userId: string, id: number): any => {
+export const toggleLike = (userId: number, id: number): any => {
   return async (dispatch: Dispatch<PhotoAction>, getState: () => RootState) => {
     dispatch({ type: PhotoActionTypes.MUTATE_PHOTO_START });
 
@@ -50,7 +50,7 @@ export const toggleLike = (userId: string, id: number): any => {
       newPhotos.likes = [...newPhotos.likes, userId];
     } else {
       newPhotos.likes = newPhotos.likes.filter(
-        (item: string) => item !== userId
+        (item: number) => item !== userId
       );
     }
     try {
@@ -70,7 +70,7 @@ export const toggleLike = (userId: string, id: number): any => {
 };
 
 
-export const setComment = ( id:number , nickName:string, text:string ,userId: string, avatarUrl:string ):any => {
+export const setComment = ( id:number , nickName:string, text:string ,userId: number, avatarUrl:string ):any => {
 return async (dispatch:Dispatch<PhotoAction>, getState: ()=> RootState) => {
   dispatch({type: PhotoActionTypes.MUTATE_PHOTO_START})
 

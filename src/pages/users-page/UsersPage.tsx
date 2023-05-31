@@ -1,12 +1,31 @@
 import React from 'react';
 import { Layout } from '../../components/layout/Layout';
-import { useAppSelector } from '../../hooks/hooks';
-import './UsersPage.scss';
+import { useAppDispatch, useAppSelector } from '../../hooks/hooks';
 import { UserBio } from '../../components/user-bio/UserBio';
 import { Card } from '../../components/Card/Card';
+import { fetchPosts } from '../../redux/actions/postsByUser';
+import { fetchAuthorizedUsers } from '../../redux/actions/users';
+import InfiniteScroll from 'react-infinite-scroll-component';
+import { ThreeDots } from 'react-loader-spinner';
+import './UsersPage.scss';
+import { useParams } from 'react-router-dom';
+import nextId from 'react-id-generator';
 
 export const UsersPage = () => {
+  const [page, setPage] = React.useState(1);
+  const dispatch = useAppDispatch();
   const authorizedUser = useAppSelector((state) => state.users.authorizedUser);
+  const { id } = useParams()
+ 
+  React.useEffect(() => {
+    dispatch(fetchPosts(page));
+    dispatch(fetchAuthorizedUsers());
+  }, [page]);
+  const { posts, totalPosts } = useAppSelector((state) => state.postsByUser);
+  const nextHandler = () => {
+    setPage(page + 1);
+  };
+
   return (
     <Layout
       nickName={authorizedUser.nickName}
@@ -24,11 +43,40 @@ export const UsersPage = () => {
           description={authorizedUser.description}
           url={authorizedUser.url}
         />
-        <div className='cnUserPageRootContent'>
-          <Card imgUrl='dasdasd' className='cnUserPageCard' />
-          <Card imgUrl='dasdasd' className='cnUserPageCard'/>
-          <Card imgUrl='dasdasd' className='cnUserPageCard'/>
-        </div>
+
+        <InfiniteScroll
+          dataLength={posts.length}
+          next={nextHandler}
+          hasMore={posts.length < totalPosts}
+          loader={
+            <div style={{ display: 'flex', justifyContent: 'center' }}>
+              <ThreeDots
+                height='50'
+                width='50'
+                radius='9'
+                color='grey'
+                ariaLabel='three-dots-loading'
+                visible={true}
+              />
+            </div>
+          }
+          endMessage={<p>Thats All</p>}
+        >
+          <div className='cnUserPageRootContent'>
+            {posts.map((post) => (
+              <Card
+              id= {post.id}
+              author= {post.author}
+                key={nextId()}
+                imgUrl={post.imgUrl}
+                className='cnUserPageCard'
+                likes={post.likes.length}
+                comments={post.comments.length}
+                isLikedByYou={post.likes.includes(post.author.id ?? 0)}
+              />
+            ))}
+          </div>
+        </InfiniteScroll>
       </div>
     </Layout>
   );

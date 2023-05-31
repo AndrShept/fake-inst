@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
 import React from 'react';
 import { Layout } from '../../components/layout/Layout';
 import { DetailCard } from '../../components/details-card/DetailCard';
@@ -8,6 +9,7 @@ import './MainPage.scss';
 import { ThreeDots, ColorRing } from 'react-loader-spinner';
 import { fetchUsers } from '../../redux/actions/users';
 import { fetchAuthorizedUsers } from '../../redux/actions/users';
+import { Loader } from '../../components/loader/Loader';
 
 export const MainPage: React.FC = () => {
   const dispatch = useAppDispatch();
@@ -56,15 +58,7 @@ export const MainPage: React.FC = () => {
           endMessage={<p>Thats All</p>}
         >
           {isPhotoLoading ? (
-            <ColorRing
-              visible={true}
-              height='80'
-              width='80'
-              ariaLabel='blocks-loading'
-              wrapperStyle={{}}
-              wrapperClass='blocks-wrapper'
-              colors={['#e15b64', '#f47e60', '#f8b26a', '#abbd81', '#849b87']}
-            />
+<Loader/>
           ) : (
             photos.map(({ author, id, imgUrl, likes, comments }) => (
               <DetailCard
@@ -84,7 +78,7 @@ export const MainPage: React.FC = () => {
           )}
         </InfiniteScroll>
       </div>
-      <div>MainPage</div>
+     
     </Layout>
   );
 };

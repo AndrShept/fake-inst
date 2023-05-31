@@ -6,10 +6,10 @@ import {
 
 const initialState: PhotoState = {
   photos: [],
-  isPhotoLoading: true,
+  isPhotoLoading: false,
   error: null,
   totalPhotos: 0,
-  isMutateLoading: true
+  isMutateLoading: false
 
 };
 export const photosReducer = (state = initialState, action: PhotoAction) => {

@@ -14,7 +14,7 @@ const authRoutes = [
 ];
 
 export const AuthRoutes: React.FC = () => {
-  const userAuth = useAppSelector((state) => state.users);
+  const {userAuth} = useAppSelector((state) => state.users);
   const dispatch = useAppDispatch();
 
   React.useEffect(() => {

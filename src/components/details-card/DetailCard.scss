@@ -11,7 +11,7 @@
   justify-content: start;
   height: 60px;
   padding-left: 20px;
-  background-color: #fff;
+  // background-color: #fff;
 }
 
 .cnDetailCardImg {
@@ -29,25 +29,27 @@
   gap: 10px;
   background-color: #ececec;
   border-radius: 7px;
-  margin-left: 10px;
+  margin-left: 20px;
 }
 
 .cnDetailCardLikes {
   font-size: 14px;
   font-weight: 600;
   padding: 10px;
+  margin-left: 20px;
 }
 
 .cnDetailCardComments {
   display: flex;
   flex-direction: column;
-  padding: 0 10px 10px 10px;
+  padding: 0px 20px 20px 20px
 }
 
 .cnDetailCardLikeIcon {
   cursor: pointer;
   color: red;
 
+
   &:active {
     transform: scale(1.3);
     transition: 0.3s;
@@ -57,12 +59,15 @@
     transform: scale(1.2);
     //   padding: 40px;
     transition: 0.3s;
+
   }
+
 }
 .cnDetailCardLikeIconFull {
   // margin-right: 6px;
   cursor: pointer;
   color: red;
+  position: relative;
   &:active {
     transform: scale(1.3);
     transition: 0.3s;
@@ -73,6 +78,18 @@
     //   padding: 40px;
     transition: 0.3s;
   }
+
+}
+
+.cnDetailCardLikeInfo{
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #00000067;
+  padding: 10px;
+  z-index: 2;
+
 }
 
 .cnDetailCardCommentsIcon {
@@ -111,7 +128,7 @@
 .cnDetailCardTextAreaWrapper {
   display: flex;
   flex-direction: column;
-  padding: 10px;
+  padding: 0px 20px 20px 20px;
   justify-content: center;
   align-items: center;
 }

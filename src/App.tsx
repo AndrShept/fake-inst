@@ -6,7 +6,7 @@ function App() {
     <>
       <AuthRoutes  />
       <Routes>
-      {/* <Route path='*' element={<div>404 ERROR</div> } /> */}
+      <Route path='*' element={<div>404 ERROR</div> } />
       </Routes>
     </>
   );
