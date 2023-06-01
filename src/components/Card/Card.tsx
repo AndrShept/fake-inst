@@ -5,7 +5,7 @@ import { AiFillHeart, AiOutlineHeart } from 'react-icons/ai';
 import { FaComment, FaRegComment } from 'react-icons/fa';
 import './Card.scss';
 import { AuthorTypes } from '../../types/photoTypes';
-import { useAppDispatch, useAppSelector } from '../../hooks/hooks';
+import { useAppDispatch } from '../../hooks/hooks';
 import { toggleLikeByPost } from '../../redux/actions/postsByUser';
 
 interface CardProps {
@@ -14,8 +14,8 @@ interface CardProps {
   isLikedByYou?: boolean;
   likes?: number;
   comments?: number;
-  id: number
-  author: AuthorTypes
+  postId: number;
+  author: AuthorTypes;
 }
 
 export const Card: React.FC<CardProps> = ({
@@ -24,12 +24,12 @@ export const Card: React.FC<CardProps> = ({
   isLikedByYou,
   likes,
   comments,
-  id,
-  author
+  postId,
+  author,
 }) => {
-  const dispatch = useAppDispatch()
+  const dispatch = useAppDispatch();
   const handleLike = () => {
-    dispatch(toggleLikeByPost( author.id, id ))
+    dispatch(toggleLikeByPost(author.id, postId));
   };
   return (
     <div className={cn('cnCardRoot', className)}>

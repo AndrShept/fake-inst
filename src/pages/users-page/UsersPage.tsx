@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React from 'react';
 import { Layout } from '../../components/layout/Layout';
 import { useAppDispatch, useAppSelector } from '../../hooks/hooks';
@@ -10,18 +11,21 @@ import { ThreeDots } from 'react-loader-spinner';
 import './UsersPage.scss';
 import { useParams } from 'react-router-dom';
 import nextId from 'react-id-generator';
+import { Loader } from '../../components/loader/Loader';
 
 export const UsersPage = () => {
   const [page, setPage] = React.useState(1);
   const dispatch = useAppDispatch();
   const authorizedUser = useAppSelector((state) => state.users.authorizedUser);
-  const { id } = useParams()
- 
+  const { id } = useParams();
+
   React.useEffect(() => {
     dispatch(fetchPosts(page));
     dispatch(fetchAuthorizedUsers());
   }, [page]);
-  const { posts, totalPosts } = useAppSelector((state) => state.postsByUser);
+  const { posts, totalPosts, isPostsLoading } = useAppSelector(
+    (state) => state.postsByUser
+  );
   const nextHandler = () => {
     setPage(page + 1);
   };
@@ -63,18 +67,22 @@ export const UsersPage = () => {
           endMessage={<p>Thats All</p>}
         >
           <div className='cnUserPageRootContent'>
-            {posts.map((post) => (
-              <Card
-              id= {post.id}
-              author= {post.author}
-                key={nextId()}
-                imgUrl={post.imgUrl}
-                className='cnUserPageCard'
-                likes={post.likes.length}
-                comments={post.comments.length}
-                isLikedByYou={post.likes.includes(post.author.id ?? 0)}
-              />
-            ))}
+            {isPostsLoading ? (
+              <Loader />
+            ) : (
+              posts.map((post) => (
+                <Card
+                  postId={post.id}
+                  author={post.author}
+                  key={nextId()}
+                  imgUrl={post.imgUrl}
+                  className='cnUserPageCard'
+                  likes={post.likes.length}
+                  comments={post.comments.length}
+                  isLikedByYou={post.likes.includes(post.author.id ?? 0)}
+                />
+              ))
+            )}
           </div>
         </InfiniteScroll>
       </div>

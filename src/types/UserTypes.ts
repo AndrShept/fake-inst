@@ -1,7 +1,7 @@
 export type UserTypes = {
   nickName?: string;
   avatarUrl?: string;
-  userId?:  number;
+  userId?: number;
   firstName?: string;
   lastName?: string;
   subscribed?: number[];

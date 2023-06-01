@@ -34,5 +34,3 @@ export const setAuthUsers = (payload = false): any => {
     dispatch({ type: UsersActionTypes.IS_USERS_AUTH, payload });
   };
 };
-
-

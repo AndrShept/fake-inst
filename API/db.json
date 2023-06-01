@@ -96,8 +96,7 @@
       "likes": [
         2,
         3,
-        "3",
-        4
+        "3"
       ],
       "comments": [
         {
@@ -574,7 +573,8 @@
         null,
         null,
         "4",
-        4
+        4,
+        3
       ],
       "comments": [
         {
@@ -672,8 +672,7 @@
       "imgUrl": "https://cdn.pixabay.com/photo/2016/11/14/04/45/elephant-1822636_640.jpg",
       "likes": [
         3,
-        "3",
-        2
+        "3"
       ],
       "comments": [
         {
@@ -828,7 +827,6 @@
       "likes": [
         2,
         3,
-        5,
         4
       ],
       "comments": [

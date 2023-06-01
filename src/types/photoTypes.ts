@@ -20,7 +20,7 @@ export interface CommentsTypes {
   nickName: string;
   text: string;
   avatarUrl?: string;
-  userId: number ;
+  userId: number;
 }
 
 export interface AuthorTypes {

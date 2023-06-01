@@ -69,32 +69,36 @@ export const toggleLike = (userId: number, id: number): any => {
   };
 };
 
+export const setComment = (
+  id: number,
+  nickName: string,
+  text: string,
+  userId: number,
+  avatarUrl: string
+): any => {
+  return async (dispatch: Dispatch<PhotoAction>, getState: () => RootState) => {
+    dispatch({ type: PhotoActionTypes.MUTATE_PHOTO_START });
 
-export const setComment = ( id:number , nickName:string, text:string ,userId: number, avatarUrl:string ):any => {
-return async (dispatch:Dispatch<PhotoAction>, getState: ()=> RootState) => {
-  dispatch({type: PhotoActionTypes.MUTATE_PHOTO_START})
+    const { photos } = getState();
+    const findPhotos = photos.photos.find((item) => item.id === id);
+    const findIndex = photos.photos.findIndex((item) => item.id === id);
+    const NewPhotos = findPhotos;
+    NewPhotos!.comments = [
+      ...findPhotos!.comments,
+      { nickName, text, userId, avatarUrl },
+    ];
 
-  const {photos} = getState()
-  const findPhotos = photos.photos.find((item) => item.id === id);
-  const findIndex = photos.photos.findIndex((item) => item.id === id);
-  const NewPhotos = findPhotos
-  NewPhotos!.comments = [...findPhotos!.comments, {nickName, text, userId, avatarUrl} ]
-  
-
-  try {
-    const response = await axios.put(`http://localhost:3000/posts/${id}`, {
-      ...NewPhotos,
-    });
-    photos.photos[findIndex] = response.data;
-    dispatch({
-      type: PhotoActionTypes.MUTATE_PHOTO_SUCCESS,
-      payload: photos.photos,
-    });
-
- 
-  } catch (error) {
-    dispatch({ type: PhotoActionTypes.MUTATE_PHOTO_FAIL, payload: error });
-  }
+    try {
+      const response = await axios.put(`http://localhost:3000/posts/${id}`, {
+        ...NewPhotos,
+      });
+      photos.photos[findIndex] = response.data;
+      dispatch({
+        type: PhotoActionTypes.MUTATE_PHOTO_SUCCESS,
+        payload: photos.photos,
+      });
+    } catch (error) {
+      dispatch({ type: PhotoActionTypes.MUTATE_PHOTO_FAIL, payload: error });
+    }
+  };
 };
-
-}

@@ -13,8 +13,7 @@ export interface PostByUserState {
   isPostsLoading: boolean;
   error: null | string;
   totalPosts: number;
-  isMutateByPostLoading: boolean
-  // isMutateLoading: boolean;
+  isMutateByPostLoading: boolean;
 }
 
 export interface CommentsTypes {
