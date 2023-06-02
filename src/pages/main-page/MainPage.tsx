@@ -6,8 +6,7 @@ import { useAppDispatch, useAppSelector } from '../../hooks/hooks';
 import { fetchPhotos } from '../../redux/actions/photos';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import './MainPage.scss';
-import { ThreeDots, ColorRing } from 'react-loader-spinner';
-import { fetchUsers } from '../../redux/actions/users';
+import { ThreeDots } from 'react-loader-spinner';
 import { fetchAuthorizedUsers } from '../../redux/actions/users';
 import { Loader } from '../../components/loader/Loader';
 
@@ -16,11 +15,10 @@ export const MainPage: React.FC = () => {
   const { photos, isPhotoLoading, totalPhotos } = useAppSelector(
     (state) => state.photos
   );
-  const  authorizedUser  = useAppSelector((state) => state.users.authorizedUser);
+  const authorizedUser = useAppSelector((state) => state.users.authorizedUser);
   const [page, setPage] = React.useState(1);
   React.useEffect(() => {
     dispatch(fetchPhotos(page));
-    dispatch(fetchUsers());
     dispatch(fetchAuthorizedUsers());
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -31,9 +29,8 @@ export const MainPage: React.FC = () => {
 
   return (
     <Layout
-    firstName={authorizedUser.firstName}
-    lastName={authorizedUser.lastName}
-
+      firstName={authorizedUser.firstName}
+      lastName={authorizedUser.lastName}
       nickName={authorizedUser.nickName}
       userId={authorizedUser.id}
       avatarUrl={authorizedUser.avatarUrl}
@@ -58,7 +55,7 @@ export const MainPage: React.FC = () => {
           endMessage={<p>Thats All</p>}
         >
           {isPhotoLoading ? (
-<Loader/>
+            <Loader />
           ) : (
             photos.map(({ author, id, imgUrl, likes, comments }) => (
               <DetailCard
@@ -78,7 +75,6 @@ export const MainPage: React.FC = () => {
           )}
         </InfiniteScroll>
       </div>
-     
     </Layout>
   );
 };

@@ -2,7 +2,7 @@ import { Dispatch } from 'redux';
 import { UsersAction, UsersActionTypes } from '../../types/userTypes';
 import axios from 'axios';
 
-export const fetchUsers = (id = 1): any => {
+export const fetchUsers = (id:number|string ): any => {
   return async (dispatch: Dispatch<UsersAction>) => {
     try {
       dispatch({ type: UsersActionTypes.FETCH_USERS_START });

@@ -1,7 +1,7 @@
 import { UserState, UsersAction, UsersActionTypes } from '../../types/userTypes';
 
 const initialState:UserState  = {
-  user: [],
+  user: {},
   isUserLoading: true,
   userAuth: false,
   authorizedUser: {},

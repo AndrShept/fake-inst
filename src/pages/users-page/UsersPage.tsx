@@ -4,8 +4,8 @@ import { Layout } from '../../components/layout/Layout';
 import { useAppDispatch, useAppSelector } from '../../hooks/hooks';
 import { UserBio } from '../../components/user-bio/UserBio';
 import { Card } from '../../components/Card/Card';
-import { fetchPosts } from '../../redux/actions/postsByUser';
-import { fetchAuthorizedUsers } from '../../redux/actions/users';
+import { fetchPostsByUser } from '../../redux/actions/postsByUser';
+import { fetchAuthorizedUsers, fetchUsers } from '../../redux/actions/users';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import { ThreeDots } from 'react-loader-spinner';
 import './UsersPage.scss';
@@ -17,15 +17,18 @@ export const UsersPage = () => {
   const [page, setPage] = React.useState(1);
   const dispatch = useAppDispatch();
   const authorizedUser = useAppSelector((state) => state.users.authorizedUser);
+  const user = useAppSelector((state) => state.users.user);
+  const postsByUser = useAppSelector((state) => state.users.user.postsByUser);
+  const isUserLoading = useAppSelector((state) => state.users.isUserLoading);
   const { id } = useParams();
 
   React.useEffect(() => {
-    dispatch(fetchPosts(page));
     dispatch(fetchAuthorizedUsers());
-  }, [page]);
-  const { posts, totalPosts, isPostsLoading } = useAppSelector(
-    (state) => state.postsByUser
-  );
+    dispatch(fetchUsers(id??0));
+  }, [page, id]);
+
+  console.log(user, 'users');
+
   const nextHandler = () => {
     setPage(page + 1);
   };
@@ -38,20 +41,20 @@ export const UsersPage = () => {
     >
       <div className='cnUserPageRoot'>
         <UserBio
-          firstName={authorizedUser.firstName}
-          lastName={authorizedUser.lastName}
-          avatarUrl={authorizedUser.avatarUrl}
-          nickName={authorizedUser.nickName}
-          subscribed={authorizedUser.subscribed}
-          subscribers={authorizedUser.subscribers}
-          description={authorizedUser.description}
-          url={authorizedUser.url}
+          firstName={user.firstName}
+          lastName={user.lastName}
+          avatarUrl={user.avatarUrl}
+          nickName={user.nickName}
+          subscribed={user.subscribed}
+          subscribers={user.subscribers}
+          description={user.description}
+          url={user.url}
         />
 
         <InfiniteScroll
-          dataLength={posts.length}
+          dataLength={10}
           next={nextHandler}
-          hasMore={posts.length < totalPosts}
+          hasMore={true}
           loader={
             <div style={{ display: 'flex', justifyContent: 'center' }}>
               <ThreeDots
@@ -67,10 +70,11 @@ export const UsersPage = () => {
           endMessage={<p>Thats All</p>}
         >
           <div className='cnUserPageRootContent'>
-            {isPostsLoading ? (
+            {isUserLoading ? (
               <Loader />
             ) : (
-              posts.map((post) => (
+              postsByUser?.length &&
+              postsByUser.map((post) => (
                 <Card
                   postId={post.id}
                   author={post.author}

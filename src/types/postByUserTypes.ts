@@ -1,3 +1,5 @@
+import { PhotoTypes } from './photoTypes';
+
 export interface PostByUserTypes {
   id: number;
   imgUrl: string;
@@ -6,6 +8,7 @@ export interface PostByUserTypes {
   author: AuthorTypes;
   title: string;
   body: string;
+  postsByUser: PhotoTypes[]
 }
 
 export interface PostByUserState {
@@ -44,7 +47,7 @@ export interface FetchPostsStartAction {
 }
 export interface FetchPostsSuccessAction {
   type: PostByUserActionTypes.FETCH_POSTS_SUCCESS;
-  payload: PostByUserTypes[];
+  payload: PostByUserTypes;
 }
 export interface FetchPostsFailAction {
   type: PostByUserActionTypes.FETCH_POSTS_FAIL;
@@ -60,7 +63,7 @@ export interface MutateLikesByPostStartActions {
 }
 export interface MutateLikesByPostSuccessActions {
   type: PostByUserActionTypes.MUTATE_POSTS_SUCCESS;
-  payload: PostByUserTypes[];
+  payload: PostByUserTypes;
 }
 export interface MutateLikesByPostFailActions {
   type: PostByUserActionTypes.MUTATE_POSTS_FAIL;

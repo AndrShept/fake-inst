@@ -1,3 +1,5 @@
+import { PhotoTypes } from './photoTypes';
+
 export type UserTypes = {
   nickName?: string;
   avatarUrl?: string;
@@ -8,13 +10,15 @@ export type UserTypes = {
   subscribers?: number[];
   description?: string;
   url?: string;
+  postsByUser?: PhotoTypes[]
+
 };
 
 export interface AuthorizedUserTypes extends Omit<UserTypes, 'userId'> {
   id?: number;
 }
 export interface UserState {
-  user: UserTypes[];
+  user: UserTypes;
   isUserLoading: boolean;
   userAuth: boolean;
   authorizedUser: AuthorizedUserTypes;
@@ -33,7 +37,7 @@ export interface FetchUsersStartActions {
 }
 export interface FetchUsersSuccessActions {
   type: UsersActionTypes.FETCH_USERS_SUCCESS;
-  payload: UserTypes[];
+  payload: UserTypes;
 }
 export interface FetchUsersFailActions {
   type: UsersActionTypes.FETCH_USERS_FAIL;

@@ -6,39 +6,26 @@ import {
 import axios from 'axios';
 import { RootState } from '../store';
 
-export const fetchPosts = (page = 1): any => {
+export const fetchPostsByUser = (id: number | string): any => {
   return async (
     dispatch: Dispatch<PostByUserAction>,
     getState: () => RootState
   ) => {
     try {
       const state = getState();
-      if (page === 1) {
-        dispatch({ type: PostByUserActionTypes.FETCH_POSTS_START });
-      }
 
-      const response = await axios.get('http://localhost:3000/postsByUser', {
-        params: {
-          _page: page,
-          _limit: 10,
-        },
+      dispatch({ type: PostByUserActionTypes.FETCH_POSTS_START });
+
+      const response = await axios.get(`http://localhost:3000/users/${id}`);
+
+      dispatch({
+        type: PostByUserActionTypes.SET_TOTAL_POSTS,
+        payload: response.headers['x-total-count'],
       });
-
-      if (page === 1) {
-        dispatch({
-          type: PostByUserActionTypes.SET_TOTAL_POSTS,
-          payload: response.headers['x-total-count'],
-        });
-        dispatch({
-          type: PostByUserActionTypes.FETCH_POSTS_SUCCESS,
-          payload: response.data,
-        });
-      } else {
-        dispatch({
-          type: PostByUserActionTypes.FETCH_POSTS_SUCCESS,
-          payload: [...state.postsByUser.posts, ...response.data],
-        });
-      }
+      dispatch({
+        type: PostByUserActionTypes.FETCH_POSTS_SUCCESS,
+        payload: response.data,
+      });
     } catch (error) {
       dispatch({
         type: PostByUserActionTypes.FETCH_POSTS_FAIL,
@@ -55,10 +42,9 @@ export const toggleLikeByPost = (userId: number, idPost: number): any => {
   ) => {
     dispatch({ type: PostByUserActionTypes.MUTATE_POSTS_START });
 
-    const { postsByUser } = getState();
+    const { postsByUser } = getState().postsByUser;
     const findPhotos = postsByUser.posts.find((item) => item.id === idPost);
     const findIndex = postsByUser.posts.findIndex((item) => item.id === idPost);
-    console.log(postsByUser);
     const newPosts = { ...findPhotos, likes: [...findPhotos!.likes] };
     if (!newPosts.likes.includes(userId)) {
       newPosts.likes = [...newPosts.likes, userId];
@@ -67,17 +53,16 @@ export const toggleLikeByPost = (userId: number, idPost: number): any => {
     }
     try {
       const response = await axios.put(
-        `http://localhost:3000/postsByUser/${idPost}`,
+        `http://localhost:3000/postsByUser/${userId}/${idPost}`,
         {
           ...newPosts,
         }
       );
+      postsByUser.posts[findIndex] = response.data;
       dispatch({
         type: PostByUserActionTypes.MUTATE_POSTS_SUCCESS,
         payload: postsByUser.posts,
       });
-
-      postsByUser.posts[findIndex] = response.data;
     } catch (error) {
       dispatch({
         type: PostByUserActionTypes.MUTATE_POSTS_FAIL,
